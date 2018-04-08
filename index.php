@@ -32,7 +32,7 @@
         <hr>
       </div>
     </main>
-    <? include 'shared/footer.php' ?>
+    <?php include 'shared/footer.php' ?>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI7LlKH8pWqfJgvOJX9Eshaa2UfNC0McE"></script>
 
   </body>
