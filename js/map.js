@@ -45,4 +45,9 @@ $( document ).ready(function() {
   $("#getPosition").click(function() {
     getLocation();
   });
+
+  $("#getTest").click(function() {
+    console.log("test");
+  });
+
 });

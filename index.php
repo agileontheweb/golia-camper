@@ -16,7 +16,7 @@
         <div class="row">
           <div class="col-md-4">
             <h2>Temperature Cpu Raspberry</h2>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="#" id="getTest" role="button">View details &raquo;</a></p>
           </div>
           <div class="col-md-4">
             <h2>Giveme position</h2>
