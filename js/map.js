@@ -47,7 +47,7 @@ $( document ).ready(function() {
   });
 
   $("#getTest").click(function() {
-    console.log("test");
+    alert("test");
   });
 
 });
