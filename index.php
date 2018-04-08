@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Golia Camper Dashboard</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="scss/layout.css" rel="stylesheet">
   </head>
   <body>
     <main role="main">
@@ -14,18 +15,17 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <h2>Temperature Cpu Raspberry</h2>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <h2>Giveme position</h2>
+            <div id="map"></div>
+            <p id="demo"></p>
+            <p><a class="btn btn-secondary" href="#" id="getPosition" role="button">position</a></p>
           </div>
           <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h2>Internal Golia temperature</h2>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
         </div>
@@ -33,5 +33,7 @@
       </div>
     </main>
     <? include 'shared/footer.php' ?>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI7LlKH8pWqfJgvOJX9Eshaa2UfNC0McE"></script>
+
   </body>
 </html>
