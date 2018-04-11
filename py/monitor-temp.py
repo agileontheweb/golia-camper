@@ -8,3 +8,6 @@ def measure_temp():
 while True:
         print(measure_temp())
         time.sleep(1)
+        f = open('monitor-temp.txt','w')
+        f.write('hello world')
+        f.close()
