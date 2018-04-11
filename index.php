@@ -16,7 +16,11 @@
         <div class="row">
           <div class="col-md-4">
             <h2>Temperature Cpu Raspberry</h2>
-            <?php exec('sudo python /py/led.py'); ?>
+            <?php
+              $myfile = fopen("py/monitor-temp.txt", "r") or die("Unable to open file!");
+              echo fread($myfile,filesize("py/monitor-temp.txt"));
+              fclose($myfile);
+            ?>
 
 
             <p><a class="btn btn-secondary" href="#" id="getTest" role="button">View details &raquo;</a></p>
