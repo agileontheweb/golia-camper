@@ -16,10 +16,14 @@
         <div class="row">
           <div class="col-md-4">
             <h2>Temperature Cpu Raspberry</h2>
-
             <div id="temperature-cpu"></div>
-
-            <p><a class="btn btn-secondary" href="#" id="getTest" role="button">View details &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            <?php
+              $command = escapeshellcmd('/py/led.py');
+              $output = shell_exec($command);
+              echo $output;
+            ?>
           </div>
           <div class="col-md-4">
             <h2>Giveme position</h2>
