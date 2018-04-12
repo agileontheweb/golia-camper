@@ -20,21 +20,18 @@
           </div>
           <div class="col-md-4">
             <?php
-              $command = escapeshellcmd('/py/led.py');
+              $command = escapeshellcmd('py/led.py');
               $output = shell_exec($command);
               echo $output;
+              echo "ss"
             ?>
           </div>
-          <div class="col-md-4">
+          <!-- <div class="col-md-4">
             <h2>Giveme position</h2>
             <div id="map"></div>
             <p id="demo"></p>
             <p><a class="btn btn-secondary" href="#" id="getPosition" role="button">position</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Internal Golia temperature</h2>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div>
+          </div> -->
         </div>
         <hr>
       </div>
