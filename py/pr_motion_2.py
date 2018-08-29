@@ -14,6 +14,8 @@ def my_callback(channel):
     GPIO.output(24,GPIO.HIGH)
     time.sleep(1)
     GPIO.output(24,GPIO.LOW)
+    GPIO.cleanup()
+
 try:
     GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=my_callback)
     while True:
