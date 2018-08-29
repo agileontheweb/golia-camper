@@ -1,28 +1,19 @@
 import RPi.GPIO as GPIO
 import time
-import subprocess
+ 
+SENSOR_PIN = 23
+ 
 GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-
-pir_sensor = 23 
-led = 24 
-
-GPIO.setup(pir_sensor, GPIO.IN, GPIO.PUD_DOWN)
-
-current_state = 0
-GPIO.setup(led,GPIO.OUT)
-
+GPIO.setup(SENSOR_PIN, GPIO.IN)
+ 
+def my_callback(channel):
+    # Here, alternatively, an application / command etc. can be started.
+    print('There was a movement!')
+ 
 try:
+    GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=my_callback)
     while True:
-    
-        time.sleep(0.1)
-        current_state = GPIO.input(pir_sensor)
-        if current_state == 1:
-          print("GPIO pin %s is %s" % (pir_sensor, current_state)) # motion detected
-          GPIO.output(led,True) #Turn on LED
-          print "capture picture"
-          time.sleep(2) # leave LED on for 2 seconds
-          GPIO.output(led,False) #turn off LED
-          time.sleep(2) # wait 1 seconds for PIR to reset. 
+        time.sleep(100)
 except KeyboardInterrupt:
-    GPIO.cleanup()
+    print "Finish..."
+GPIO.cleanup()
