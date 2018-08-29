@@ -10,14 +10,13 @@ def my_callback(channel):
     # Here, alternatively, an application / command etc. can be started.
     print('There was a movement!')
     GPIO.output(24,GPIO.HIGH)
+    time.sleep(2) 
+    GPIO.output(24,GPIO.LOW)
 try:
     GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=my_callback)
     while True:
       time.sleep(1)
     
-    time.sleep(1) 
-    GPIO.output(24,GPIO.LOW)
-
 except KeyboardInterrupt:
   print "Finish..."
   GPIO.cleanup()
