@@ -17,7 +17,7 @@ def my_callback(channel):
 try:
     GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=my_callback)
     while True:
-      time.sleep(100)
+      time.sleep(1)
 
 except KeyboardInterrupt:
   print "Finish..."
