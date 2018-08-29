@@ -7,12 +7,13 @@ GPIO.setup(23, GPIO.IN) #PIR
 GPIO.setup(24, GPIO.OUT) #BUzzer
 
 try:
-    time.sleep(2) # to stabilize sensor
+    time.sleep(1) # to stabilize sensor
     while True:
         if GPIO.input(23):
             GPIO.output(24, True)
             print("Motion Detected...")
-        time.sleep(0.1) #loop delay, should be less than detection delay
+            time.sleep(0.1) #Buzzer turns on for 0.5 sec
+        time.sleep(0) #loop delay, should be less than detection delay
         print("Stop Motion...")
         GPIO.output(24, False)
 
