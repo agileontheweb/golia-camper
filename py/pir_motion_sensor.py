@@ -10,13 +10,12 @@ try:
    while True:
       if GPIO.input(23):
          GPIO.output(24, True)
-           print("Motion Detected...")
+          print("Motion Detected...")
           time.sleep(0.1) #Buzzer turns on for 0.5 sec
-        time.sleep(0) #loop delay, should be less than detection delay
-        print("Stop Motion...")
-        GPIO.output(24, False)
-
+       time.sleep(0) #loop delay, should be less than detection delay
+       print("Stop Motion...")
+       GPIO.output(24, False)
 except:
-    GPIO.cleanup()
+  GPIO.cleanup()
 
 
