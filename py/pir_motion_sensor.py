@@ -15,3 +15,5 @@ elif i==1:               #When output from motion sensor is HIGH
     print "Intruder detected",i
     GPIO.output(3, 1)  #Turn ON LED
     time.sleep(0.1)
+else:
+   print "nada"
