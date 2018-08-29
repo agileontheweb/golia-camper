@@ -11,9 +11,9 @@ GPIO.setup(24, GPIO.OUT)
 def my_callback(channel):
     # Here, alternatively, an application / command etc. can be started.
     print('There was a movement!')
-   GPIO.output(24,GPIO.HIGH)
-   time.sleep(1)
-   GPIO.output(24,GPIO.LOW)
+    GPIO.output(24,GPIO.HIGH)
+    time.sleep(1)
+    GPIO.output(24,GPIO.LOW)
 try:
     GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=my_callback)
     while True:
