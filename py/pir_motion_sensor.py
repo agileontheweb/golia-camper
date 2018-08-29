@@ -19,3 +19,5 @@ try:
 
 except:
     GPIO.cleanup()
+    print("Stop Motion...")
+
