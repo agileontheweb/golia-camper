@@ -9,4 +9,8 @@ $( document ).ready(function() {
     $("#temperature-cpu").load('py/monitor-temp.php');
   }
 
+  function loadFUlstrasonicSensor(){
+    $("#ulstrasonic-sensor").load('py/ulstrasonic-distance.php');
+  }
+
 });

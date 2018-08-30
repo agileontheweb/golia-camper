@@ -14,23 +14,39 @@
       <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm  -4">
             <h2>Temperature Cpu Raspberry</h2>
             <div id="temperature-cpu"></div>
+            <!-- <form action = "py/monitor-temp.py" method = "POST">
+              <input type = "submit" value = "Run the Program!!!">
+            </form> -->
+
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-sm  -4">
             <div class="googlemap">
               <h2>Retro</h2>
               <p>
                 Quando inserisco la retro si attiva la telecamera dietro
+                <div class="camper-top-view">
+                  <img src=""/>
+                  <div class="sensor-back-center">
+                    <?#php
+                      #$temp = exec('py/ultrasonic_distance.py');
+                      #echo "$temp test";
+                    #?>
+
+                    <div id="ulstrasonic-sensor"></div>
+
+                  </div>
+                </div>
                 <br />
                 o diventa conta km
               </p>
             </div>
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-sm  -4">
 
             <div class="googlemap">
               <h2>Mappa</h2>
