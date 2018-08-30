@@ -14,11 +14,28 @@
       <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-sm-4">
             <h2>Temperature Cpu Raspberry</h2>
             <div id="temperature-cpu"></div>
           </div>
-          <div class="col-md-4">
+
+          <div class="col-sm-4">
+            <div class="googlemap">
+              <h2>Retro</h2>
+              <p>
+                Quando inserisco la retro si attiva la telecamera dietro
+                <br />
+                o diventa conta km
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+
+            <div class="googlemap">
+              <h2>Mappa</h2>
+            </div>
+
             <?php
               $command = escapeshellcmd('py/led.py');
               $output = shell_exec($command);
