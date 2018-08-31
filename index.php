@@ -1,4 +1,14 @@
 <!doctype html>
+
+<?php
+
+$command = escapeshellcmd('py/monitor-temp.py');
+$output = shell_exec($command);
+echo $output;
+
+?>
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8">

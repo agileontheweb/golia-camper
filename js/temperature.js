@@ -1,14 +1,5 @@
 $( document ).ready(function() {
 
-  $.ajax({
-    type: "POST",
-    url: "../py/monitor-temp.py",
-    data: { param: " "},
-    dataType: "text"
-    }).done(function( o ) {
-        alert("OK");
-  });
-
   loadFUlstrasonicSensor();
 
   setInterval(function(){
@@ -18,7 +9,6 @@ $( document ).ready(function() {
   function loadFile(){
     $("#temperature-cpu").load('py/monitor-temp.php');
     console.log("temperature-cpu");
-
   }
 
   function loadFUlstrasonicSensor(){
