@@ -45,9 +45,6 @@ if __name__ == '__main__':
         while True:
             dist = distance()
             print ("Measured Distance = %.1f cm" % dist)
-            f = open('ultrasonic-distance.txt','w')
-            f.write('temp: ' + dist)
-            f.close()
             time.sleep(1)
 
     except KeyboardInterrupt:
