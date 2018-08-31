@@ -46,7 +46,7 @@ if __name__ == '__main__':
             dist = distance()
             print ("Measured Distance = %.1f cm" % dist)
             f = open('ultrasonic-distance.txt','w')
-            f.write('temp: ' + dist)
+            f.write('distance: ' + dist)
             f.close()
             time.sleep(1)
 
