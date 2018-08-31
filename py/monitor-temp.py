@@ -9,5 +9,5 @@ while True:
         print(measure_temp())
         time.sleep(1)
         f = open('monitor-temp.txt','w')
-        f.write('temp: ' + measure_temp())
+        f.write(measure_temp())
         f.close()
