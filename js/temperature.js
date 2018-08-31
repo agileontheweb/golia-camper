@@ -13,7 +13,7 @@ $( document ).ready(function() {
   }
 
   function loadFUlstrasonicSensor(){
-    $("#ulstrasonic-sensor").load('py/ulstrasonic-distance.php');
+    $("#ulstrasonic-sensor").load('py/ultrasonic-distance.php');
     console.log("ulstrasonic-sensor");
   }
 
