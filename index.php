@@ -1,11 +1,9 @@
 <!doctype html>
 
 <?php
-
-$command = escapeshellcmd('py/monitor-temp.py');
-$output = shell_exec($command);
-echo $output;
-
+$result = exec('var/www/html/golia-camper/py/monitor-temp.py');
+echo "ww" . $result;
+// $result_array = json_decode($result);
 ?>
 
 
