@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
   $.ajax({
     type: "POST",
-    url: "monitor-temp.py",
+    url: "../py/monitor-temp.py",
     data: { param: " "},
     dataType: "text"
     }).done(function( o ) {
