@@ -7,6 +7,6 @@ $( document ).ready(function() {
 function temperatureRaspberry(){
   console.log("temperature-rasp");
   setInterval(function(){
-    $("#temperature-cpu").load('../php/monitor-temp.php');
+    $("#temperature-cpu").load('../php/raspberry-temp.php');
   }, 1000);
 }
