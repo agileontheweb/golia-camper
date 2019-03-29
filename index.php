@@ -34,7 +34,7 @@
         </div>
         <div class="col-4 raspberry-thermometer">
           <small>
-            <i class="fas fa-thermometer-full"></i> Rasp <span></span>
+            <i class="fas fa-thermometer-full"></i> Rasp <span id="temperature-cpu"></span>
           </small>
         </div>
       </div>
