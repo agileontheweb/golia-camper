@@ -6,7 +6,23 @@ $( document ).ready(function() {
 
 function temperatureRaspberry(){
   console.log("temperature-rasp");
+
+  $( "#btn-raspberry-temp" ).click(function() {
+        $.ajax({
+        type:'get',
+        url: '/cgi-bin/pytest.py',
+        cache:false,
+        success: function(data) {
+          console.log(data);
+        },
+        error: function(request, status, error) {
+          console.log("failed");
+        }
+     });
+
+  });
+
   setInterval(function(){
-    $("#temperature-cpu").load('http://192.168.43.202/golia-camper/php/raspberry-temp.php');
+    $("#temperature-cpu").load('../php/raspberry-temp.php');
   }, 1000);
 }

@@ -33,6 +33,7 @@
           </small>
         </div>
         <div class="col-4 raspberry-thermometer">
+          <a href="#" id="btn-raspberry-temp">click</a>
           <small>
             <i class="fas fa-thermometer-full"></i> Rasp <span id="temperature-cpu"></span>
           </small>
