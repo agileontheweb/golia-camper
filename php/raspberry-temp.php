@@ -1,5 +1,5 @@
 <?php
-  $myfile = fopen("../txt/monitor-temp.txt", "r") or die("Unable to open file!");
-  echo fread($myfile,filesize("../txt/monitor-temp.txt"));
+  $myfile = fopen("../txt/raspberry-temp.txt", "r") or die("Unable to open file!");
+  echo fread($myfile,filesize("../txt/raspberry-temp.txt"));
   fclose($myfile);
 ?>
