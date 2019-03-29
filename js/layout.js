@@ -10,7 +10,7 @@ function temperatureRaspberry(){
   $( "#btn-raspberry-temp" ).click(function() {
         $.ajax({
         type:'get',
-        url: '/cgi-bin/pytest.py',
+        url: 'http://192.168.43.202/cgi-bin/pytest.py',
         cache:false,
         success: function(data) {
           console.log(data);
@@ -22,7 +22,7 @@ function temperatureRaspberry(){
 
   });
 
-  setInterval(function(){
-    $("#temperature-cpu").load('../php/raspberry-temp.php');
-  }, 1000);
+//  setInterval(function(){
+  //  $("#temperature-cpu").load('http://192.168.43.202/golia-camper/php/raspberry-temp.php');
+ // }, 1000);
 }
