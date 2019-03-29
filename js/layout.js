@@ -12,7 +12,7 @@ function temperatureRaspberry(localhost){
   $( "#btn-raspberry-temp" ).click(function() {
         $.ajax({
         type:'get',
-        url: '/cgi-bin/temperature-raspberry.py',
+        url: '/cgi-bin/pytest.py',
         cache:false,
         success: function(data) {
           console.log(data);
@@ -24,6 +24,6 @@ function temperatureRaspberry(localhost){
   });
 
   setInterval(function(){
-    $("#temperature-cpu").load(localhost + '/php/raspberry-temp.php');
+    $("#temperature-cpu").load('192.168.43.202/golia-camper/php/raspberry-temp.php');
   }, 1000);
 }
