@@ -1,6 +1,8 @@
 $( document ).ready(function() {
   console.log( "ready!" );
   temperatureRaspberry();
+  var localhost = 'http://192.168.43.202/golia-camper';
+  console.log(localhost);
 });
 
 
@@ -10,12 +12,12 @@ function temperatureRaspberry(){
   $( "#btn-raspberry-temp" ).click(function() {
         $.ajax({
         type:'get',
-        url: '/cgi-bin/temperature-raspberry.py',
+        url: localhost + '/cgi-bin/temperature-raspberry.py',
         cache:false,
         success: function(data) {
           console.log(data);
           setInterval(function(){
-            $("#temperature-cpu").load('../php/raspberry-temp.php');
+            $("#temperature-cpu").load(localhost + '/golia-camper/php/raspberry-temp.php');
           }, 1000);
         },
         error: function(request, status, error) {
