@@ -7,7 +7,6 @@ $( document ).ready(function() {
 function temperatureRaspberry(){
   console.log("temperature-rasp");
   setInterval(function(){
-    console.log("refresh temperature raspberry");
-    $("#temperature-cpu").load('./php/raspberry-temp.php');
+    $("#temperature-cpu").load('http://192.168.43.202/golia-camper/php/raspberry-temp.php');
   }, 1000);
 }
