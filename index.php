@@ -1,10 +1,4 @@
 <!doctype html>
-<?php
-  $command = escapeshellcmd('py/monitor-temp.py');
-  $output = shell_exec($command);
-  echo $output;
-?>
-<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -35,7 +29,7 @@
         <div class="col-4 raspberry-thermometer">
           <a href="#" id="btn-raspberry-temp">click</a>
           <small>
-            <i class="fas fa-thermometer-full"></i> Rasp <span id="temperature-cpu"></span>
+            <i class="fas fa-thermometer-full"></i> Rasp <span id="raspberry-temperature"></span>
           </small>
         </div>
       </div>
@@ -44,7 +38,7 @@
           <p class="align-middle"><i class="fas fa-bolt"></i> <span class="ml-2">12 V</span> </p>
         </div>
         <div class="col-4 text-right">
-          <input type="checkbox" checked data-toggle="toggle" data-onstyle="secondary" data-size="xs" data-onstyle="success">
+<input type="checkbox" id="btn-12v" data-toggle="toggle">
         </div>
       </div>
       <div class="row align-items-center bg-light py-3 by border-top">
@@ -52,7 +46,7 @@
           <p class="align-middle"><i class="fas fa-plug"></i> <span class="ml-2">220 V </span></p>
         </div>
         <div class="col-4 bg-light text-right">
-          <input type="checkbox" checked data-toggle="toggle" data-onstyle="secondary" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-220v" checked data-toggle="toggle" data-onstyle="secondary" data-size="xs" data-onstyle="success">
         </div>
       </div>
 
@@ -139,6 +133,7 @@
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
 
     <!-- My script -->
+
     <script type="text/javascript" src="js/layout.js"></script>
 
   </body>

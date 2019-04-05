@@ -1,0 +1,60 @@
+$( document ).ready(function() {
+  console.log( "ready!" );
+  $("#raspberry-temperature").load('http://192.168.43.202/golia-camper/txt/raspberry-temp.txt');
+//  temperatureRaspberry();
+  btn12v();
+});
+
+function btn12v(){
+  var status_text = 'off';
+
+
+$.ajax({
+         type:'post',
+         url: '/cgi-bin/12v.txt',
+         dataType: "text",
+         success: function() {
+          console.log(data);
+         },
+         error: function(request, status, error) {
+          console.log("nada");
+         }
+      });
+
+
+$('#btn-12v').change(function() {
+	if ($(this).parent().hasClass('off')){
+	 status_text = "spegni";
+	}else{
+	status_text = 'accendi';
+	}
+	$.ajax({
+         type:'post',
+         url: '/cgi-bin/12v.py',
+	 data: {
+	   'stat' : status_text},
+         dataType: "text",
+         success: function(data) {
+          console.log(data);
+         },
+         error: function(request, status, error) {
+          console.log("failed");
+         }
+      });
+  });
+}
+
+$( "#btn-raspberry-temp" ).click(function() {
+        $.ajax({
+        type:'get',
+        url: '/cgi-bin/12v.py',
+        cache:false,
+        success: function(data) {
+          console.log(data);
+        },
+        error: function(request, status, error) {
+          console.log("failed");
+        }
+     });
+});
+
