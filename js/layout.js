@@ -1,15 +1,40 @@
 $( document ).ready(function() {
   console.log( "ready!" );
-  var localhost = 'http://192.168.43.202/golia-camper';
-  console.log(localhost);
-  temperatureRaspberry(localhost);
+  // $("#raspberry-temperature").load('http://localhost:8888/golia-camper/txt/raspberry-temp.txt');
+  // temperatureRaspberry();
+  btn12v();
 });
 
+function btn12v(){
+  $('#btn-12v').change(function() {
 
-function temperatureRaspberry(localhost){
-  console.log("temperature-rasp" + localhost);
+    param1Data = "nada";
+
+    if( $(this).closest('.btn').hasClass('off') ){
+      console.log("chiamo una definziione nel pyton")
+      param1Data = param1Data;
+    }else{
+      param1Data = ''
+    }
+
+    $.ajax({
+      type:'get',
+      url: '/cgi-bin/pytest.py',
+      success: function(data) {
+        console.log(data);
+      },
+      error: function(request, status, error) {
+        console.log("failed");
+      }
+    });
+
+  })
+}
+
+function temperatureRaspberry(){
 
   $( "#btn-raspberry-temp" ).click(function() {
+
         $.ajax({
         type:'get',
         url: '/cgi-bin/pytest.py',
@@ -22,8 +47,4 @@ function temperatureRaspberry(localhost){
         }
      });
   });
-
-  setInterval(function(){
-    $("#temperature-cpu").load('192.168.43.202/golia-camper/php/raspberry-temp.php');
-  }, 1000);
 }
