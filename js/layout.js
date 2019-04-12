@@ -11,7 +11,8 @@ function btnDoorBackLight(){
   var status_text=String;
   console.log(status_text)
 
-  $('#btn-doorback-light').change(function() {
+  $('input').change(function(event) {
+  console.log(event.target.id);
 	if ($(this).parent().hasClass('off')){
 	 status_text = "spegni";
 	}else{
@@ -19,7 +20,7 @@ function btnDoorBackLight(){
 	}
 	$.ajax({
          type:'post',
-         url: '/cgi-bin/12v.py',
+         url: '/cgi-bin/' + event.target.id + '.py',
 	 data: {
 	   'stat' : status_text},
          dataType: "text",

@@ -10,9 +10,7 @@
   </head>
   <body>
     <style>
-    .progress{
-      height: 0.5rem;
-    }
+    .progress{ height: 0.5rem; }
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,35 +18,6 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
     </nav>
 
     <div class=" align-items-center py-2 bg-dark text-white system">
@@ -65,21 +34,21 @@
             <i class="fas fa-plug"></i>
             <small> / 220 V </small>
           </p>
-          <input type="checkbox" id="btn-12v" data-toggle="toggle" value="ciao" data-size="xs">
+          <input type="checkbox" id="btn-220" data-toggle="toggle" value="" data-size="xs">
         </div>
         <div class="col-4 text-center border-right py-3">
           <p class="align-middle">
             <i class="fas fa-shower"></i>
             <small> / Acqua</small>
           </p>
-          <input type="checkbox" id="btn-12v" data-toggle="toggle" value="ciao" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-pump-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
         <div class="col-4 text-center py-3">
           <p class="align-middle">
             <i class="fas fa-bolt"></i>
             <small class="d-block">Profumo</small>
           </p>
-          <input type="checkbox" id="btn-12v" data-toggle="toggle" value="ciao" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-smell-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
       </div>
 
@@ -90,19 +59,19 @@
           <p class="align-middle">
             <small class="d-block">Tavolo</small>
           </p>
-          <input type="checkbox" id="btn-12v" data-toggle="toggle" value="ciao" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-table-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
         <div class="col-3 text-center border-right py-3">
           <p class="align-middle">
             <small class="d-block">Cucina</small>
           </p>
-          <input type="checkbox" id="btn-12v" data-toggle="toggle" value="ciao" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-kitchen-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
         <div class="col-3 text-center border-right py-3">
           <p class="align-middle">
             <small class="d-block">Divanetti</small>
           </p>
-          <input type="checkbox" id="btn-12v" data-toggle="toggle" value="ciao" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-sofa-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
         <div class="col-3 text-center py-3">
 	<input id="chkToggle2" type="checkbox" checked>
@@ -110,7 +79,7 @@
           <p class="align-middle">
             <small class="d-block">Portellone</small>
           </p>
-          <input type="checkbox" id="btn-doorback-light" data-toggle="toggle" value="ciao" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-doorback-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
       </div>
     </div>
