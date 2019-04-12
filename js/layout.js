@@ -12,7 +12,8 @@ function btnDoorBackLight(){
   console.log(status_text)
 
   $('input').change(function(event) {
-  console.log(event.target.id);
+  pythonfile = event.target.id
+  console.log(pythonfile);
 	if ($(this).parent().hasClass('off')){
 	 status_text = "spegni";
 	}else{
@@ -20,7 +21,7 @@ function btnDoorBackLight(){
 	}
 	$.ajax({
          type:'post',
-         url: '/cgi-bin/' + event.target.id + '.py',
+         url: '/cgi-bin/' + pythonfile + '.py',
 	 data: {
 	   'stat' : status_text},
          dataType: "text",
