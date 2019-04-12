@@ -13,7 +13,7 @@ function checkStatusButtons(){
 
   $.ajax({
         type:'get',
-        url: '/cgi-bin/220v.php',
+        url: '/cgi-bin/doorbacklight.php',
         cache: false,
         success: function(data) {
           console.log(data);
@@ -26,14 +26,13 @@ function checkStatusButtons(){
 }
 
 function on(data){
-  console.log("fuori" + data);
 
   if(data.indexOf("off") > -1){
-   console.log("doorbacklight e off");
+   console.log("backlightled e off");
    $('#btn-doorback-light').bootstrapToggle('off');
   }else{
     $('#btn-doorback-light').bootstrapToggle('on');
-    console.log("doorbacklight e on");
+    console.log("backlightled e on");
   }
 }
 
