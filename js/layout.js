@@ -8,7 +8,7 @@ $( document ).ready(function() {
 });
 
 function checkStatusButtons(){
-  array = ['btn-220.php','btn-pump.php'];
+  array = ['220.php','pump.php'];
 
   $('#chkToggle2').bootstrapToggle();
 
