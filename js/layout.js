@@ -3,7 +3,36 @@ $( document ).ready(function() {
   // $("#raspberry-temperature").load('http://localhost:8888/golia-camper/txt/raspberry-temp.txt');
   // temperatureRaspberry();
   btn12v();
+   btnDoorBackLight();
+
 });
+
+function btnDoorBackLight(){
+  var status_text=String;
+  console.log(status_text)
+
+  $('#btn-doorback-light').change(function() {
+	if ($(this).parent().hasClass('off')){
+	 status_text = "spegni";
+	}else{
+	status_text = 'accendi';
+	}
+	$.ajax({
+         type:'post',
+         url: '/cgi-bin/12v.py',
+	 data: {
+	   'stat' : status_text},
+         dataType: "text",
+         success: function(data) {
+          console.log(data);
+         },
+         error: function(request, status, error) {
+          console.log("failed");
+         }
+      });
+  });
+}
+
 
 function btn12v(){
   $('#btn-12v').change(function() {
