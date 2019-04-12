@@ -29,17 +29,17 @@ function on(data){
 
   if(data.indexOf("off") > -1){
    console.log("backlightled e off");
-   $('#btn-doorback-light').bootstrapToggle('off');
+   // $('#btn-doorback-light').bootstrapToggle('off');
   }else{
-    $('#btn-doorback-light').bootstrapToggle('on');
     console.log("backlightled e on");
+    // $('#btn-doorback-light').bootstrapToggle('on');
   }
 }
 
 
 function clickButton(){
   var status_text=String;
-  console.log(status_text)
+  console.log("VAR status test: " status_text);
 
   $('input').change(function(event) {
 
@@ -51,7 +51,7 @@ function clickButton(){
   if ($(this).parent().hasClass('off')){
 	 status_text = "spegni";
 	}else{
-	   status_text = 'accendi';
+	  status_text = 'accendi';
 	}
 
   $.ajax({
