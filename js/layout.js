@@ -8,13 +8,12 @@ $( document ).ready(function() {
 });
 
 function checkStatusButtons(){
-  array = ['220.php','pump.php'];
 
-  $('#chkToggle2').bootstrapToggle();
+  $('#btn-doorback-light').bootstrapToggle();
 
   $.ajax({
         type:'get',
-        url: '/cgi-bin/' + array,
+        url: '/cgi-bin/doorbacklight.php',
         cache: false,
         success: function(data) {
           console.log(data);
