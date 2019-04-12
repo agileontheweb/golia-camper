@@ -9,11 +9,9 @@ $( document ).ready(function() {
 
 function checkStatusButtons(){
 
-  // $('#btn-doorback-light').bootstrapToggle();
-
   $.ajax({
         type:'get',
-        url: '/cgi-bin/doorbacklight.php',
+        url: '/cgi-bin/door-back-light.php',
         cache: false,
         success: function(data) {
           console.log(data);
@@ -28,11 +26,11 @@ function checkStatusButtons(){
 function on(data){
 
   if(data.indexOf("off") > -1){
-   console.log("backlightled e off");
-   // $('#btn-doorback-light').bootstrapToggle('off');
+    console.log("backlightled e off");
+    $('#btn-doorback-light').bootstrapToggle('off');
   }else{
     console.log("backlightled e on");
-    // $('#btn-doorback-light').bootstrapToggle('on');
+    $('#btn-doorback-light').bootstrapToggle('on');
   }
 }
 
@@ -49,9 +47,9 @@ function clickButton(){
   console.log(pythonfile);
 
   if ($(this).parent().hasClass('off')){
-	 status_text = "spegni";
+	  status_text = "spegni";
 	}else{
-	  status_text = 'accendi';
+    status_text = 'accendi';
 	}
 
   $.ajax({
