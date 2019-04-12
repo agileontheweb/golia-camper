@@ -8,11 +8,13 @@ $( document ).ready(function() {
 });
 
 function checkStatusButtons(){
+  array = ['btn-220.php','btn-pump.php'];
 
   $('#chkToggle2').bootstrapToggle();
+
   $.ajax({
         type:'get',
-        url: '/cgi-bin/12v.php',
+        url: '/cgi-bin/' + array,
         cache: false,
         success: function(data) {
           console.log(data);
