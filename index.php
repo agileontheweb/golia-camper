@@ -74,7 +74,6 @@
           <input type="checkbox" id="btn-sofa-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
         <div class="col-3 text-center py-3">
-          <input id="chkToggle2" type="checkbox" checked>
           <p class="align-middle">
             <small class="d-block">Portellone</small>
           </p>

@@ -29,11 +29,11 @@ function on(data){
   console.log("fuori" + data);
 
   if(data.indexOf("off") > -1){
-   console.log("si e off");
-   $('#chkToggle2').bootstrapToggle('off');
+   console.log("doorbacklight e off");
+   $('#btn-doorback-light').bootstrapToggle('off');
   }else{
-$('#chkToggle2').bootstrapToggle('on');
-    console.log("si e on");
+    $('#btn-doorback-light').bootstrapToggle('on');
+    console.log("doorbacklight e on");
   }
 }
 
