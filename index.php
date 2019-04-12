@@ -33,11 +33,13 @@
           </small>
         </div>
       </div>
+	<input id="chkToggle2" type="checkbox" checked>
+
       <div class="row align-items-center bg-light py-3 border-top">
         <div class="col-8">
           <p class="align-middle"><i class="fas fa-bolt"></i> <span class="ml-2">12 V</span> </p>
         </div>
-        <div class="col-4 text-right">
+        <div class="col-4 text-right btn-12v">
 <input type="checkbox" id="btn-12v" data-toggle="toggle">
         </div>
       </div>
@@ -54,7 +56,9 @@
         <div class="col-8">
           <p class="align-middle"><i class="fas fa-shower"></i> Acqua</p>
         </div>
-        <div class="col-4 bg-light text-right">
+        <div class="col-4 bg-light text-right ">
+<input type="checkbox" id="btn-water-pump" data-toggle="toggle">
+
           <input type="checkbox" checked data-toggle="toggle" data-onstyle="secondary" data-size="xs" data-onstyle="success">
         </div>
       </div>
