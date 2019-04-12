@@ -34,7 +34,7 @@
             <i class="fas fa-plug"></i>
             <small> / 220 V </small>
           </p>
-          <input type="checkbox" id="btn-220" data-toggle="toggle" value="" data-size="xs">
+          <input type="checkbox" id="btn-220v" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
         <div class="col-4 text-center border-right py-3">
           <p class="align-middle">
@@ -77,7 +77,7 @@
           <p class="align-middle">
             <small class="d-block">Portellone</small>
           </p>
-          <input type="checkbox" id="btn-doorback-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-door-back-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
       </div>
     </div>

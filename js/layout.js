@@ -8,35 +8,43 @@ $( document ).ready(function() {
 });
 
 function checkStatusButtons(){
-  checkFile = ['door-back-light','220']
 
-  $.each(checkFile, function( index, value ) {
-    console.log( index + ": " + value );
+  checkFile = ['220v',
+               'pump',
+               'smell-light',
+               'table-light',
+               'kitchen-light',
+               'sofa-light',
+               'door-back-light'
+              ]
+
+  $.each(checkFile, function(index,nameFile) {
+    console.log(index,nameFile);
+
     $.ajax({
           type:'get',
-          url: '/cgi-bin/' + value + '.php',
+          url: './php/' + nameFile + '.php',
           cache: false,
           success: function(data) {
-            console.log(data);
-    	      on(data);
+            console.log("LOAD PHP FILE " + nameFile + data);
+    	      on(data, nameFile);
           },
             error: function(request, status, error) {
             console.log("failed");
           }
         });
   });
-
-
 }
 
-function on(data){
-
+function on(data, nameFile){
+  console.log("DENTRO DATA" + " " + nameFile + " " + data);
+  console.log('name button' + '#btn-' + nameFile);
   if(data.indexOf("off") > -1){
     console.log("backlightled e off");
-    $('#btn-doorback-light').bootstrapToggle('off');
+    $('#btn-' + nameFile).bootstrapToggle('off');
   }else{
     console.log("backlightled e on");
-    $('#btn-doorback-light').bootstrapToggle('on');
+    $('#btn-' + nameFile).bootstrapToggle('on');
   }
 }
 
@@ -77,7 +85,6 @@ function clickButton(){
 function temperatureRaspberry(){
 
   $( "#btn-raspberry-temp" ).click(function() {
-
         $.ajax({
         type:'get',
         url: '/cgi-bin/pytest.py',
