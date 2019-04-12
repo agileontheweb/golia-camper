@@ -8,19 +8,25 @@ $( document ).ready(function() {
 });
 
 function checkStatusButtons(){
+  checkFile = ['door-back-light','220']
 
-  $.ajax({
-        type:'get',
-        url: '/cgi-bin/door-back-light.php',
-        cache: false,
-        success: function(data) {
-          console.log(data);
-  	      on(data);
-        },
-          error: function(request, status, error) {
-          console.log("failed");
-        }
-      });
+  $.each(checkFile, function( index, value ) {
+    console.log( index + ": " + value );
+    $.ajax({
+          type:'get',
+          url: '/cgi-bin/' + value + '.php',
+          cache: false,
+          success: function(data) {
+            console.log(data);
+    	      on(data);
+          },
+            error: function(request, status, error) {
+            console.log("failed");
+          }
+        });
+  });
+
+
 }
 
 function on(data){
