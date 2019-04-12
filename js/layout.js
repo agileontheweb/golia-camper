@@ -2,12 +2,42 @@ $( document ).ready(function() {
   console.log( "ready!" );
   // $("#raspberry-temperature").load('http://localhost:8888/golia-camper/txt/raspberry-temp.txt');
   // temperatureRaspberry();
-  btn12v();
-   btnDoorBackLight();
+  checkStatusButtons();
+  clickButton();
 
 });
 
-function btnDoorBackLight(){
+function checkStatusButtons(){
+
+  $('#chkToggle2').bootstrapToggle();
+  $.ajax({
+        type:'get',
+        url: '/cgi-bin/12v.php',
+        cache: false,
+        success: function(data) {
+          console.log(data);
+  	      on(data);
+        },
+          error: function(request, status, error) {
+          console.log("failed");
+        }
+      });
+}
+
+function on(data){
+  console.log("fuori" + data);
+
+  if(data.indexOf("off") > -1){
+   console.log("si e off");
+   $('#chkToggle2').bootstrapToggle('off');
+  }else{
+$('#chkToggle2').bootstrapToggle('on');
+    console.log("si e on");
+  }
+}
+
+
+function clickButton(){
   var status_text=String;
   console.log(status_text)
 
@@ -38,33 +68,6 @@ function btnDoorBackLight(){
          }
       });
   });
-}
-
-
-function btn12v(){
-  $('#btn-12v').change(function() {
-
-    param1Data = "nada";
-
-    if( $(this).closest('.btn').hasClass('off') ){
-      console.log("chiamo una definziione nel pyton")
-      param1Data = param1Data;
-    }else{
-      param1Data = ''
-    }
-
-    $.ajax({
-      type:'get',
-      url: '/cgi-bin/pytest.py',
-      success: function(data) {
-        console.log(data);
-      },
-      error: function(request, status, error) {
-        console.log("failed");
-      }
-    });
-
-  })
 }
 
 function temperatureRaspberry(){
