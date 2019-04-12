@@ -13,7 +13,7 @@ function checkStatusButtons(){
 
   $.ajax({
         type:'get',
-        url: '/cgi-bin/doorbacklight.php',
+        url: '/cgi-bin/220v.php',
         cache: false,
         success: function(data) {
           console.log(data);
