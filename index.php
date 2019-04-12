@@ -41,7 +41,7 @@
             <i class="fas fa-shower"></i>
             <small> / Acqua</small>
           </p>
-          <input type="checkbox" id="btn-pump-light" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
+          <input type="checkbox" id="btn-pump" data-toggle="toggle" value="" data-size="xs" data-onstyle="success">
         </div>
         <div class="col-4 text-center py-3">
           <p class="align-middle">
