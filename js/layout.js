@@ -9,7 +9,7 @@ $( document ).ready(function() {
 
 function checkStatusButtons(){
 
-  $('#btn-doorback-light').bootstrapToggle();
+  // $('#btn-doorback-light').bootstrapToggle();
 
   $.ajax({
         type:'get',
