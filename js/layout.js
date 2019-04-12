@@ -39,7 +39,7 @@ function on(data){
 
 function clickButton(){
   var status_text=String;
-  console.log("VAR status test: " status_text);
+  console.log("VAR status test: " + status_text);
 
   $('input').change(function(event) {
 
