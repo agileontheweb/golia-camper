@@ -12,16 +12,21 @@ function btnDoorBackLight(){
   console.log(status_text)
 
   $('input').change(function(event) {
-  pythonfile = event.target.id
+
+  idBtn = event.target.id
+  console.log(idBtn);
+  pythonfile = '/cgi-bin/' + idBtn + '.py';
   console.log(pythonfile);
-	if ($(this).parent().hasClass('off')){
+
+  if ($(this).parent().hasClass('off')){
 	 status_text = "spegni";
 	}else{
-	status_text = 'accendi';
+	   status_text = 'accendi';
 	}
-	$.ajax({
+
+  $.ajax({
          type:'post',
-         url: '/cgi-bin/' + pythonfile + '.py',
+         url: pythonfile,
 	 data: {
 	   'stat' : status_text},
          dataType: "text",
