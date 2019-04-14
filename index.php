@@ -28,6 +28,14 @@
       </div>
     </div>
 
+    <h1><div id="temp"></div><div id="minutely"></div></h1>
+        <h2><div id="location"></div></h2>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+
     <div class="row bg-light border-top">
         <div class="col-4 text-center border-right py-3">
           <p class="align-middle">
@@ -124,6 +132,7 @@
             <i class="fas fa-thermometer-full"></i> Rasp <span id="raspberry-temperature"></span>
           </small>
         </div> -->
+	<div id="googleMap" style="width:100%;height:400px;"></div>
 
     </div>
 
@@ -132,8 +141,10 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- https://gitbrent.github.io/bootstrap4-toggle/ -->
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTdnBvHJhF8VlimUf7h8iwME-qm6oqgBU&callback=initMap"></script>
 
     <!-- My script -->
     <script type="text/javascript" src="js/layout.js"></script>
+
   </body>
 </html>

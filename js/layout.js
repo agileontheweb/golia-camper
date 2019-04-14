@@ -1,21 +1,80 @@
 $( document ).ready(function() {
   console.log( "ready!" );
-  // $("#raspberry-temperature").load('http://localhost:8888/golia-camper/txt/raspberry-temp.txt');
-  // temperatureRaspberry();
+
+  temperatureRaspberry();
   checkStatusButtons();
   clickButton();
-
 });
+
+
+function initMap() {
+    var latlng = new google.maps.LatLng(-34.397, 150.644);
+    var myOptions = {
+        zoom: 8,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),
+            myOptions);
+}
+google.maps.event.addDomListener(window, "load", initMap);
+
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function weather() {
+  var location = document.getElementById("location");
+//  var apiKey = "c06fb76d1ceb764c7d473c771de06618";
+//  var url = "https://api.forecast.io/forecast/";
+
+  navigator.geolocation.getCurrentPosition(success, error);
+
+  function success(position) {
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+	console.log("lat" + latitude);
+    location.innerHTML =
+      "Latitude is " + latitude + "° Longitude is " + longitude + "°";
+
+    $.getJSON(
+      url + apiKey + "/" + latitude + "," + longitude + "?callback=?",
+      function(data) {
+        $("#temp").html(data.currently.temperature + "° F");
+        $("#minutely").html(data.minutely.summary);
+      }
+    );
+  }
+
+  function error() {
+    location.innerHTML = "Unable to retrieve your location";
+  }
+
+  location.innerHTML = "Locating...";
+}
+
+
 
 function checkStatusButtons(){
 
-  checkFile = ['220v',
-               'pump',
-               'smell-light',
-               'table-light',
-               'kitchen-light',
-               'sofa-light',
-               'door-back-light'
+  checkFile = [
+             // '220v',
+               //'pump',
+              // 'smell-light',
+              // 'table-light',
+              // 'kitchen-light',
+              // 'sofa-light',
+              'door-back-light'
               ]
 
   $.each(checkFile, function(index,nameFile) {
@@ -83,18 +142,29 @@ function clickButton(){
 }
 
 function temperatureRaspberry(){
-
-  $( "#btn-raspberry-temp" ).click(function() {
-        $.ajax({
-        type:'get',
-        url: '/cgi-bin/pytest.py',
-        cache:false,
-        success: function(data) {
-          console.log(data);
+  var status_text=String;
+  status_text= 'getTemperature';
+  getTemp();
+  
+  setInterval(function(){
+    getTemp();
+   }, 3000);
+   
+   function getTemp(){
+       $.ajax({
+         type:'post',
+         url: '/cgi-bin/raspberry-temp.py',
+	 data: {
+	   'stat' : status_text
         },
-        error: function(request, status, error) {
+         dataType: "text",
+         success: function(data) {
+          console.log(data);
+	$('#raspberry-temperature').html(data);
+         },
+         error: function(request, status, error) {
           console.log("failed");
-        }
-     });
-  });
+         }
+      });
+     }
 }
