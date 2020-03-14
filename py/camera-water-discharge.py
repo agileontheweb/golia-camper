@@ -7,7 +7,7 @@ GPIO.setup(27,GPIO.OUT)
 f = open("../txt/camera-water-discharge.txt", "r")
 c = f.read()
 
-if c==true:
+if c=="on":
  print 'led on'
  GPIO.output(27, GPIO.HIGH)
 else:

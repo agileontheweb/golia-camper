@@ -7,7 +7,7 @@ GPIO.setup(18,GPIO.OUT)
 f = open("../txt/camera-front.txt", "r")
 c = f.read()
 
-if c==true:
+if c=="on":
  print 'led on'
  GPIO.output(18, GPIO.HIGH)
 else:

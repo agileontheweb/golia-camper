@@ -44,9 +44,9 @@ $(document).ready(function() {
     id = $(this).attr("id");
     $('#'+id).find('div').toggleClass("bg-green-400 bg-gray-400");
     if ($('#'+id).find('div').hasClass('bg-green-400')){
-  	  status_text = true;
+  	  status_text = "on";
   	}else{
-  	  status_text = false;
+  	  status_text = "off";
   	}
 
     $.ajax({
@@ -63,19 +63,6 @@ $(document).ready(function() {
         }
     });
 
-    // $.ajax({
-    //       type:'post',
-    //       url: '../py/'+ id +'.py',
-  	//       data: {
-  	//         'status_text' : status_text },
-    //           dataType: "text",
-    //           success: function(data) {
-    //             console.log(data);
-    //           },
-    //           error: function(request, status, error) {
-    //           console.log("failed");
-    //         }
-    // });
   });
 
 });
