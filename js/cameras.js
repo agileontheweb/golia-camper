@@ -1,6 +1,5 @@
 $(document).ready(function() {
   console.log("Ready cameras");
-  var status_text = String;
 
   checkStatusButtons();
   getAllButtonId();
@@ -48,7 +47,8 @@ $(document).ready(function() {
   	}else{
   	  status_text = 'spento';
   	}
-    console.log(status_text)
+
+    var status_text = String;
 
     // $.ajax({
     //       type:'post',
