@@ -14,6 +14,7 @@
     </div>
   </div>
 
+
   <div class="flex content-start bg-gray-200">
     <div class="w-1/3 border">
       <a href="pages/camera.php">
@@ -51,6 +52,6 @@
   <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
   <script type="text/javascript" src="js/layout.js"></script> -->
-
+<?php include("shared/footer.php") ?>
 </body>
 </html>
