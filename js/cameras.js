@@ -50,9 +50,23 @@ $(document).ready(function() {
   	}
     console.log(status_text)
 
+    // $.ajax({
+    //       type:'post',
+    //       url: '../php/'+ id +'.php',
+  	//       data: {
+  	//         'status_text' : status_text },
+    //           dataType: "text",
+    //           success: function(data) {
+    //             console.log(data);
+    //           },
+    //           error: function(request, status, error) {
+    //           console.log("failed");
+    //         }
+    // });
+
     $.ajax({
           type:'post',
-          url: '../php/'+ id +'.php',
+          url: '../py/'+ id +'.py',
   	      data: {
   	        'status_text' : status_text },
               dataType: "text",
