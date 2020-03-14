@@ -10,20 +10,27 @@
 
   <div class="flex content-start bg-gray-200">
     <div class="w-1/3 border">
-      <div class="text-gray-700 text-center bg-gray-400 p-10">
-        <a href="pages/camera.php">Telecamere</a>
-      </div>
+      <a href="pages/camera.php">
+        <div class="text-gray-700 text-center bg-gray-400 p-10">
+          Telecamere
+        </div>
+      </a>
     </div>
     <div class="w-1/3 border">
-      <div class="text-gray-700 text-center bg-gray-400 p-10">
-        <a href="pages/service.php">Servizi</a>
-      </div>
+      <a href="pages/service.php">
+        <div class="text-gray-700 text-center bg-gray-400 p-10">
+          Servizi
+        </div>
+      </a>
     </div>
 
+
     <div class="w-1/3 border">
-      <div class="text-gray-700 text-center bg-gray-400 p-10">
-        <a href="pages/radio.php">Radio</a>
-      </div>
+      <a href="pages/radio.php">
+        <div class="text-gray-700 text-center bg-gray-400 p-10">
+          Radio
+        </div>
+      </a>
     </div>
   </div>
 

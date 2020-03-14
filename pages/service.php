@@ -10,25 +10,33 @@
 
   <div class="flex content-start bg-gray-200">
     <div class="w-1/3 border">
-      <div class="text-gray-700 text-center bg-gray-400 p-10">
-        <a href="../">Home</a>
-      </div>
+      <a href="../">
+        <div class="text-gray-700 text-center bg-gray-400 p-10">
+          Home
+        </div>
+      </a>
     </div>
     <div class="w-1/3 border">
-      <div class="text-gray-700 text-center bg-gray-400 p-10">
-        Portellone
-      </div>
+      <a href="#">
+        <div class="text-gray-700 text-center bg-gray-400 p-10">
+          Portellone
+        </div>
+      </a>
     </div>
     <div class="w-1/3 border">
-      <div class="text-gray-700 text-center bg-gray-400 p-10">
-        Dinette
-      </div>
+      <a href="#">
+        <div class="text-gray-700 text-center bg-gray-400 p-10">
+          Dinette
+        </div>
+      </a>
     </div>
 
     <div class="w-1/3 border">
-      <div class="text-gray-700 text-center bg-gray-400 p-10">
-        etcc..
-      </div>
+      <a href="#">
+        <div class="text-gray-700 text-center bg-gray-400 p-10">
+          etcc..
+        </div>
+      </a>
     </div>
   </div>
 
