@@ -17,14 +17,14 @@
       </a>
     </div>
     <div class="w-1/3 border">
-      <a href="#">
+      <a href="#" id="camera-front">
         <div class="text-gray-700 text-center bg-gray-400 p-10">
           Frontale
         </div>
       </a>
     </div>
     <div class="w-1/3 border">
-      <a href="#">
+      <a href="#" id="camera-back">
         <div class="text-gray-700 text-center bg-gray-400 p-10">
           Retro
         </div>
@@ -39,6 +39,7 @@
       </a>
     </div>
   </div>
-
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/cameras.js"></script>
 </body>
 </html>
