@@ -50,23 +50,9 @@ $(document).ready(function() {
 
     var status_text = String;
 
-    // $.ajax({
-    //       type:'post',
-    //       url: '../php/'+ id +'.php',
-  	//       data: {
-  	//         'status_text' : status_text },
-    //           dataType: "text",
-    //           success: function(data) {
-    //             console.log(data);
-    //           },
-    //           error: function(request, status, error) {
-    //           console.log("failed");
-    //         }
-    // });
-
     $.ajax({
           type:'post',
-          url: '../py/'+ id +'.py',
+          url: '../php/'+ id +'.php',
   	      data: {
   	        'status_text' : status_text },
               dataType: "text",
@@ -77,6 +63,20 @@ $(document).ready(function() {
               console.log("failed");
             }
     });
+
+    // $.ajax({
+    //       type:'post',
+    //       url: '../py/'+ id +'.py',
+  	//       data: {
+  	//         'status_text' : status_text },
+    //           dataType: "text",
+    //           success: function(data) {
+    //             console.log(data);
+    //           },
+    //           error: function(request, status, error) {
+    //           console.log("failed");
+    //         }
+    // });
   });
 
 });
