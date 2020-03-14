@@ -4,20 +4,22 @@ $(document).ready(function() {
   checkStatusButtons();
   getAllButtonId();
 
+  var status_text = "";
+
   function checkStatusButtons(){
 
     $.get('../txt/camera-front.txt', function(data) {
-      console.log(data);
+      console.log("Camera front: " + data);
       onOff('camera-front',data)
     });
 
     $.get('../txt/camera-back.txt', function(data) {
-      console.log(data);
+      console.log("Camera back: " + data);
       onOff('camera-back',data)
     });
 
     $.get('../txt/camera-water-discharge.txt', function(data) {
-      console.log(data);
+      console.log("Camera water discharge: " +  data);
       onOff('camera-water-discharge',data)
     });
   }
@@ -41,27 +43,24 @@ $(document).ready(function() {
     event.preventDefault();
     id = $(this).attr("id");
     $('#'+id).find('div').toggleClass("bg-green-400 bg-gray-400");
-
     if ($('#'+id).find('div').hasClass('bg-green-400')){
-  	  status_text = "acceso";
+  	  status_text = 'acceso';
   	}else{
   	  status_text = 'spento';
   	}
 
-    var status_text = String;
-
     $.ajax({
-          type:'post',
-          url: '../php/'+ id +'.php',
-  	      data: {
-  	        'status_text' : status_text },
-              dataType: "text",
-              success: function(data) {
-                console.log(data);
-              },
-              error: function(request, status, error) {
-              console.log("failed");
-            }
+      type:'post',
+      url: '../php/'+ id +'.php',
+      data: {
+        'status_text' : status_text },
+          dataType: "text",
+          success: function(data) {
+            console.log(status_text);
+          },
+          error: function(request, status, error) {
+          console.log("failed");
+        }
     });
 
     // $.ajax({
