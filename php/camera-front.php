@@ -5,7 +5,7 @@
   fwrite($f, $data);
   fclose($f);
 
-  $command = escapeshellcmd('python ../py/camera-front.py $data');
+  $command = escapeshellcmd('python ../py/camera-front.py');
   $output = shell_exec($command);
 
 ?>

@@ -32,7 +32,7 @@ $(document).ready(function() {
   }
 
   function onOff(id, data){
-    if(data == "spento"){
+    if(data == false){
       $('body').find('#'+id).find('div').removeClass("bg-green-400");
   	}else{
       $('body').find('#'+id).find('div').toggleClass("bg-green-400 bg-gray-400");
@@ -44,9 +44,9 @@ $(document).ready(function() {
     id = $(this).attr("id");
     $('#'+id).find('div').toggleClass("bg-green-400 bg-gray-400");
     if ($('#'+id).find('div').hasClass('bg-green-400')){
-  	  status_text = 'acceso';
+  	  status_text = true;
   	}else{
-  	  status_text = 'spento';
+  	  status_text = false;
   	}
 
     $.ajax({
