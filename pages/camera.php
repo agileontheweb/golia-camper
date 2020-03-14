@@ -32,7 +32,7 @@
     </div>
 
     <div class="w-1/3 border">
-      <a href="#">
+      <a href="#" id="camera-water-discharge">
         <div class="text-gray-700 text-center bg-gray-400 p-10">
           Scarico
         </div>
