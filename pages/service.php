@@ -16,6 +16,16 @@
 
   <div class="flex">
     <div class="w-1/3 border">
+      <a href="#" id="reboot-raspberry">
+        <div class="text-gray-700 text-center bg-gray-400 p-10">
+          Reboot Rasp
+        </div>
+        <a href="#" id="shutdown-raspberry">
+          <div class="text-gray-700 text-center bg-gray-400 p-10">
+            Spegni Rasp
+          </div>
+      </a>
+
       <a href="#">
         <div class="text-gray-700 text-center bg-gray-400 p-10">
           220
