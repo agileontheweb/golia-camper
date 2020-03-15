@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     $.ajax({
       type:'post',
-      url: '../php/'+ id +'.php',
+      url: '/golia-camper/php/'+ id +'.php',
       data: {
         'status_text' : status_text },
           dataType: "text",
