@@ -18,10 +18,9 @@
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <?#php include 'pages/camera.php'?>
       <div class="flex content-start bg-gray-200 overflow-hidden">
         <div class="w-1/3 border">
-          <a href="#" data-target="#carouselExampleControls" data-slide-to="1" >
+          <a href="#" class="btn-cameras" data-target="#carouselExampleControls" data-slide-to="1" >
             <div class="text-gray-700 text-center bg-gray-400 p-10">
               Telecamere
             </div>
