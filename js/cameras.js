@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  // console.log("Ready cameras");
+
+  console.log("Ready cameras");
 
   checkStatusButtons();
   getAllButtonId();
@@ -43,7 +44,7 @@ $(document).ready(function() {
   	}
   }
 
-  $('a:not(.btn-cameras, .home, .services)').on('click', function(event) {
+  $('.section-cameras a').on('click', function(event) {
     event.preventDefault();
     id = $(this).attr("id");
 

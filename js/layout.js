@@ -1,92 +1,45 @@
-$( document ).ready(function() {
-  console.log( "ready!+o" );
-   checkStatusButtons();
-   btn12v();
-   btnWaterPump();
-});
+$(document).ready(function() {
+  console.log( "ready Home" );
+  initAnalogicShutDownRaspberry();
 
-function checkStatusButtons(){
-
-  $('#chkToggle2').bootstrapToggle();
-
- $.ajax({
-      type:'get',
-      url: '/cgi-bin/12v.php',
-      cache: false,
-      success: function(data) {
-        console.log(data);
-	on(data);
-      },
-      error: function(request, status, error) {
-        console.log("failed");
-      }
+  function initAnalogicShutDownRaspberry(){
+    console.log("Init Analogic Button Shutdown Raspberry");
+    $.ajax({
+      type: "POST",
+      url: "./py/analogic-shutdown-raspberry.py"
+    }).done(function( o ) {
+       console.log("PY: rebbot raspbaerry " + o)
     });
   }
 
-function on(data){
-  console.log("fuori" + data);
- 
-  if(data.indexOf("off") > -1){
-   console.log("si e off");
-   $('#chkToggle2').bootstrapToggle('off');
-  }else{
-$('#chkToggle2').bootstrapToggle('on'); 
-    console.log("si e on");
+  $('.reboot-raspberry').click(function() {
+    console.log("Reboot Raspberry");
+    rebootRaspberry()
+  });
+
+  function rebootRaspberry(){
+    $.ajax({
+      type: "POST",
+      url: "./py/reboot-raspberry.py"
+    }).done(function( o ) {
+       console.log("PY: rebbot raspbaerry " + o)
+    });
   }
-}
 
+  function shutdownRaspberry(){
+    $.ajax({
+      type: "POST",
+      url: "./py/shutdown-raspberry.py"
+    }).done(function( o ) {
+       console.log("PY: rebbot raspbaerry " + o)
+    });
+  }
 
-function btn12v(){
-  var status_text=String;
-  console.log(status_text)
-
-  $('#btn-12v').change(function() {
-	if ($(this).parent().hasClass('off')){
-	 status_text = "spegni";
-	}else{
-	status_text = 'accendi';
-	}
-	$.ajax({
-         type:'post',
-         url: '/cgi-bin/12v.py',
-	 data: {
-	   'stat' : status_text},
-         dataType: "text",
-         success: function(data) {
-          console.log(data);
-         },
-         error: function(request, status, error) {
-          console.log("failed");
-         }
-      });
+  $('.shutdown-raspberry').on('click', function(event) {
+    console.log("Shutdown Raspberry");
+    shutdownRaspberry();
   });
-}
 
 
-function btnWaterPump(){
-
-  var status_text_pump=String;
-  console.log(status_text_pump);
-  console.log("pompa");
-
-  $('#btn-water-pump').change(function() {
-        if ($(this).parent().hasClass('off')){
-         status_text_pump = "spegni";
-        }else{
-        status_text_pump = 'accendi';
-        }
-        $.ajax({
-         type:'post',
-         url: '/cgi-bin/pump.py',
-         data: {
-           'stat' : status_text_pump},
-         dataType: "text",
-         success: function(data) {
-          console.log(data);
-         },
-         error: function(request, status, error) {
-          console.log("failed");
-         }
-      });
-  });
-}
+  
+});
