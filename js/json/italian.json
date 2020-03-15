@@ -1,0 +1,96 @@
+{
+  "radioItaliane" : [
+    {
+      "name" : "Virgin Radio",
+      "url" : "http://icecast.unitedradio.it/Virgin.mp3"
+    },
+    {
+      "name" : "Radio Kiss Kiss",
+      "url" : "http://wma07.fluidstream.net:3616/;stream.nsv"
+    },
+    {
+      "name" : "RDS Grandi successi",
+      "url" : "http://stream1.rds.it:8000/rds64k"
+    },
+    {
+      "name" : "R101",
+      "url" : "http://icecast.unitedradio.it/r101"
+    },
+    {
+      "name" : "Radio Monte Carlo",
+      "url" : "http://edge.radiomontecarlo.net/RMC.mp3"
+    },
+    {
+      "name" : "Virgin Radio",
+      "url" : "http://icecast.unitedradio.it/Virgin.mp3"
+    },
+    {
+      "name" : "Radio Kiss Kiss",
+      "url" : "http://wma07.fluidstream.net:3616/;stream.nsv"
+    },
+    {
+      "name" : "RDS Grandi successi",
+      "url" : "http://stream1.rds.it:8000/rds64k"
+    },
+    {
+      "name" : "R101",
+      "url" : "http://icecast.unitedradio.it/r101"
+    },
+    {
+      "name" : "Virgin Radio",
+      "url" : "http://icecast.unitedradio.it/Virgin.mp3"
+    },
+    {
+      "name" : "Radio Kiss Kiss",
+      "url" : "http://wma07.fluidstream.net:3616/;stream.nsv"
+    },
+    {
+      "name" : "RDS Grandi successi",
+      "url" : "http://stream1.rds.it:8000/rds64k"
+    },
+    {
+      "name" : "R101",
+      "url" : "http://icecast.unitedradio.it/r101"
+    },
+    {
+      "name" : "R101",
+      "url" : "http://icecast.unitedradio.it/r101"
+    },
+    {
+      "name" : "Virgin Radio",
+      "url" : "http://icecast.unitedradio.it/Virgin.mp3"
+    },
+    {
+      "name" : "Radio Kiss Kiss",
+      "url" : "http://wma07.fluidstream.net:3616/;stream.nsv"
+    },
+    {
+      "name" : "RDS Grandi successi",
+      "url" : "http://stream1.rds.it:8000/rds64k"
+    },
+    {
+      "name" : "R1WTFF01",
+      "url" : "http://icecast.unitedradio.it/r101"
+    },
+    {
+      "name" : "R101",
+      "url" : "http://icecast.unitedradio.it/r101"
+    },
+    {
+      "name" : "Virgin Radio",
+      "url" : "http://icecast.unitedradio.it/Virgin.mp3"
+    },
+    {
+      "name" : "Radio Kiss Kiss",
+      "url" : "http://wma07.fluidstream.net:3616/;stream.nsv"
+    },
+    {
+      "name" : "RDS Grandi successi",
+      "url" : "http://stream1.rds.it:8000/rds64k"
+    },
+    {
+      "name" : "R1WTFF01",
+      "url" : "http://icecast.unitedradio.it/r101"
+    }
+  ]
+}

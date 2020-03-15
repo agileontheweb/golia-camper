@@ -1,0 +1,19 @@
+{
+  "electronic" : [
+    {
+      "name" : "House & Techno Classics on MixLive.ie",
+      "url" : "http://198.24.145.146:9664/stream?icy=http",
+      "bitrate": "128"
+    },
+    {
+      "name" : "Music Sessions 313 Radio",
+      "url" : "http://184.75.223.178:8171/stream?icy=http",
+      "bitrate": "128"
+      },
+    {
+      "name" : "Balaton Sound",
+      "url" : "http://listen.shoutcast.com/balatonsound?icy=http",
+      "bitrate": "128"
+    }
+  ]
+}

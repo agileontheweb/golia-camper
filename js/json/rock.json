@@ -1,0 +1,16 @@
+{
+  "jazz" : [
+    {
+      "name" : "radio rock 1",
+      "url" : "http://icecast.unitedradio.it/Virgin.mp3"
+    },
+    {
+      "name" : "radio rock 2",
+      "url" : "http://wma07.fluidstream.net:3616/;stream.nsv"
+      },
+    {
+      "name" : "radio rock 3",
+      "url" : "http://stream1.rds.it:8000/rds64k"
+    }
+  ]
+}
