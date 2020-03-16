@@ -1,6 +1,7 @@
-$( document ).ready(function() {
+$(document).ready(function() {
+  console.log( "Init Web Radio" );
   topButton();
-  pauseAudio();
+  pauseAudio()
 });
 
 function topButton(){
