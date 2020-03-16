@@ -1,10 +1,11 @@
 <?php
   error_reporting(E_ALL);
   $data = $_POST['status_text'];
-  $f = fopen('../txt/light-left.txt', 'w+');
+  $id = $_POST['id'];
+  $f = fopen('../txt/'.$id.'.txt', 'w+');
   fwrite($f, $data);
   fclose($f);
-
-  $command = escapeshellcmd('python ../py/light-left.py');
+  
+  $command = escapeshellcmd('python ../py/'.$data.'.py');
   $output = shell_exec($command);
 ?>

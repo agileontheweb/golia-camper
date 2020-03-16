@@ -1,11 +1,11 @@
 $(document).ready(function() {
   console.log( "Ready Layout" );
-
   var status_text = "";
 
-  initAnalogicShutDownRaspberry();
+  checkStatusServices();
+  // initAnalogicShutDownRaspberry();
   getAllButtonId();
-  checkStatusButtons();
+
 
   function getAllButtonId(){
     $( "a[id]" ).each(function() {
@@ -39,12 +39,13 @@ $(document).ready(function() {
 
     $.ajax({
       type:'post',
-      url: '/golia-camper/php/'+ id +'.php',
+      url: '/golia-camper/php/onoff.php',
+      cache: 'false',
       data: {
-        'status_text' : status_text },
+        'status_text' : status_text, 'id': id},
           dataType: "text",
           success: function(data) {
-            console.log(status_text);
+            console.log(status_text, id);
           },
           error: function(request, status, error) {
           console.log("failed");
@@ -52,60 +53,20 @@ $(document).ready(function() {
     });
   });
 
-  function initAnalogicShutDownRaspberry(){
-    console.log("Init Analogic Button Shutdown Raspberry");
-    $.ajax({
-      type: "POST",
-      url: "./py/analogic-shutdown-raspberry.py"
-    }).done(function( o ) {
-       console.log("PY: rebbot raspbaerry ")
-    });
-  }
+  function checkStatusServices(){
+    var listButtons = ["camera-front",
+                        "camera-back",
+                        "camera-water-discharge",
+                        "light-back",
+                        "light-dinette",
+                        "light-kitchen",
+                        "light-left",
+                        "perfume"]
 
-  $('.reboot-raspberry').click(function() {
-    console.log("Reboot Raspberry");
-    rebootRaspberry()
-  });
-
-  function rebootRaspberry(){
-    $.ajax({
-      type: "POST",
-      url: "./py/reboot-raspberry.py"
-    }).done(function( o ) {
-       console.log("PY: rebbot raspbaerry " + o)
-    });
-  }
-
-  function shutdownRaspberry(){
-    $.ajax({
-      type: "POST",
-      url: "./py/shutdown-raspberry.py"
-    }).done(function( o ) {
-       console.log("PY: rebbot raspbaerry " + o)
-    });
-  }
-
-  $('.shutdown-raspberry').on('click', function(event) {
-    console.log("Shutdown Raspberry");
-    shutdownRaspberry();
-  });
-
-
-  function checkStatusButtons(){
-    $.get('txt/camera-front.txt', function(data) {
-      onOff('camera-front',data)
-    });
-
-    $.get('txt/camera-back.txt', function(data) {
-      onOff('camera-back',data)
-    });
-
-    $.get('txt/camera-water-discharge.txt', function(data) {
-      onOff('camera-water-discharge',data)
-    });
-
-    $.get('txt/light-kitchen.txt', function(data) {
-      onOff('camera-water-discharge',data)
+    $.each( listButtons, function( key, value ) {
+      $.get('txt/' + value + '.txt', function(data) {
+        onOff(value,data)
+      });
     });
   }
 

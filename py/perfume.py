@@ -4,7 +4,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(17,GPIO.OUT)
 
-f = open("../txt/light-perfume.txt", "r")
+f = open("../txt/perfume.txt", "r")
 c = f.read()
 f.close()
 

@@ -50,7 +50,7 @@
 
   <div class="flex flex-wrap">
     <div class="w-1/3 border">
-      <a href="#" id="light-perfume" class="hover:no-underline">
+      <a href="#" id="perfume" class="hover:no-underline">
         <div class="text-gray-700 text-center bg-gray-400 p-10">
           Profumo
         </div>
