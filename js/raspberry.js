@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log("Init Raspberry")
   initAnalogicShutDownRaspberry();
-  
+
   $('.reboot-raspberry').click(function() {
     console.log("Reboot Raspberry");
     rebootRaspberry()

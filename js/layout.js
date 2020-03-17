@@ -1,11 +1,8 @@
 $(document).ready(function() {
-  console.log( "Ready Layout" );
+  console.log( "Init Layout" );
   var status_text = "";
-
   checkStatusServices();
-  // initAnalogicShutDownRaspberry();
   getAllButtonId();
-
 
   function getAllButtonId(){
     $( "a[id]" ).each(function() {
