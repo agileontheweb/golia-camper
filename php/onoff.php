@@ -5,7 +5,8 @@
   $f = fopen('../txt/'.$id.'.txt', 'w+');
   fwrite($f, $data);
   fclose($f);
-  
-  $command = escapeshellcmd('python ../py/'.$data.'.py');
+
+  $command = escapeshellcmd('python ../py/'.$id.'.py');
   $output = shell_exec($command);
+
 ?>

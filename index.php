@@ -6,17 +6,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>GOLIATH - Panel control</title>
   </head>
+  
   <body class="overflow-hidden">
-    <div role="alert">
-      <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
-        Porta aperta
-      </div>
-    </div>
+    <div role="alert" id="generic-notice"></div>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -63,6 +61,7 @@
 
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/jquery.countdownTimer.min.js"></script>
     <script src="js/raspberry.js"></script>
     <script src="js/layout.js"></script>
     <script src="js/web-radio.js"></script>

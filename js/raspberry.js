@@ -15,7 +15,7 @@ $(document).ready(function() {
   function rebootRaspberry(){
     $.ajax({
       type: "POST",
-      url: "./py/reboot-raspberry.py"
+      url: "../py/reboot-raspberry.py"
     }).done(function( o ) {
        console.log("Init Reboot Raspberry " + o)
     });
@@ -33,7 +33,7 @@ $(document).ready(function() {
   function initAnalogicShutDownRaspberry(){
     $.ajax({
       type: "POST",
-      url: "./py/analogic-shutdown-raspberry.py"
+      url: "./php/shutdown-raspberry.py"
     }).done(function( o ) {
        console.log("Init analogic shutdown button Raspberry")
     });

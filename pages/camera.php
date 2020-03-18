@@ -1,4 +1,3 @@
-
   <div class="flex-wrap content-start bg-gray-200">
     <div class="w-full border">
       <a href="#" class="home hover:no-underline" data-target="#carouselExampleControls" data-slide-to="0">
