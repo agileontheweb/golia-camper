@@ -10,14 +10,14 @@
         </div>
         <label class="block mt-4">
           <select class="sanification-timer form-select mt-1 block py-4 w-full">
-            <option value="00:01" selected>1 Min</option>
-            <!-- <option value="00:10" selected>10 Min</option> -->
-            <option value="00:20">20 Min</option>
-            <option value="00:30">30 Min</option>
-            <option value="00:40">40 Min</option>
-            <option value="00:50">50 Min</option>
-            <option value="01:00">1 ora</option>
-            <option value="01:30">1 ora 30 Min</option>
+            <option value="00:00:02" selected>5 sec</option>
+            <option value="00:10:00">10 Min</option>
+            <option value="00:20:00">20 Min</option>
+            <option value="00:30:00">30 Min</option>
+            <option value="00:40:00">40 Min</option>
+            <option value="00:50:00">50 Min</option>
+            <option value="01:00:00">1 ora</option>
+            <option value="01:30:00">1 ora 30 Min</option>
           </select>
         </label>
 
@@ -84,6 +84,22 @@
 
   <div class="flex bg-gray-200">
     <div class="w-1/2 border">
+      <a href="#" id="destroyBtn" class="hover:no-underline">
+        <div class="text-gray-700 text-center bg-red-400 p-3">
+          distruggi
+        </div>
+      </a>
+      <a href="#" id="stopBtnhms" class="hover:no-underline">
+          Ferma
+      </a>
+      <span id="clock">
+        <div class="hours"></div>
+        <div class="minutes"></div>
+        <div class="seconds"></div>
+      </span>
+
+      <div id="m_timer"></div>
+
       <a href="#" id="air-sanification" class="hover:no-underline">
         <div class="text-gray-700 text-center bg-gray-400 p-10">
           Sanificazione aria

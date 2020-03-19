@@ -12,9 +12,10 @@
     <meta http-equiv="Expires" content="0" />
     <title>GOLIATH - Panel control</title>
   </head>
-  
+
   <body class="overflow-hidden">
     <div role="alert" id="generic-notice"></div>
+
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -59,11 +60,14 @@
     </div>
   </div>
 
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/jquery.countdownTimer.min.js"></script>
-    <script src="js/raspberry.js"></script>
+    <script src="js/jQuery.countdownTimer.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <!-- <script src="js/raspberry.js"></script> -->
     <script src="js/layout.js"></script>
-    <script src="js/web-radio.js"></script>
+    <!-- <script src="js/web-radio.js"></script> -->
   </body>
 </html>

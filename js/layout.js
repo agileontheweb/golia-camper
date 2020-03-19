@@ -106,6 +106,7 @@ $(document).ready(function() {
       });
 
       $('.modal-footer #btn-confirm').on('click', function(event) {
+        $('#modal-air-sanification').modal('toggle');
         $.ajax({
           type:'post',
           url: '/golia-camper/php/air-sanification.php',
@@ -120,18 +121,19 @@ $(document).ready(function() {
               console.log("failed");
             }
         });
-
-        $('#modal-air-sanification').modal('toggle');
         var separateTime = timer;
+        console.log("separateTime: " + separateTime);
         hours = separateTime.split(':')[0];
         minutes = separateTime.split(':')[1];
-        countdown(hours,minutes);
+        seconds = separateTime.split(':')[2];
+        console.log("i secondi" + seconds);
+        countdown(hours,minutes,seconds);
       });
     })
   }
 
-  function countdown(hours,minutes){
-    var hms = hours + ':' + minutes + ':00';
+  function countdown(hours,minutes,seconds){
+    var hms = hours + ':' + minutes + ':' + seconds;
     var a = hms.split(':');
     var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
     var newSeconds= 3*seconds;
@@ -145,30 +147,66 @@ $(document).ready(function() {
     if (mm < 10) {mm = "0"+mm;}
     if (ss < 10) {ss = "0"+ss;}
     var t = hh+":"+mm+":"+ss;
+    //
 
-    notice_text = "Abbandonare il luogo per: ";
-    $('#generic-notice').append('<div class="bg-red-500 text-white font-bold rounded-t px-4 py-2"><div id="given_date">'+notice_text+'<span class="time">'+t+'</span></div></div>')
-    $('#generic-notice').show();
-    $("#given_date .time").countdowntimer({
-                size : "xs",
-                hours : 00,
-                minutes : 00,
-                seconds : 05,
-                pauseButton : "pauseBtnhms",
-                stopButton : "stopBtnhms",
-                timeUp : timeisUp
-    });
-    $('#air-sanification div').removeClass("bg-green-400");
-    $('#air-sanification div').addClass("bg-orange-400");
+    $('#clock').countdown("2020/03/19 01:00:30", function(event) {
+     $('.hours').html(event.strftime('%H'));
+     $('.minutes').html(event.strftime('%M'));
+     $('.seconds').html(event.strftime('%S'));
+   });
+
+
+    // $('#clock').countdown('2020/10/10', function(event) {
+    //   $(this).html(event.strftime('%H:%M:%S'));
+    // });
+    notice_text = "Sanificazione in corso";
+    // $('#generic-notice').append('<div class="bg-red-500 text-white font-bold rounded-t px-4 py-2"><div id="given_date">'+notice_text+'<span class="time">'+t+'</span></div></div>')
+    // $('#generic-notice').append('<div class="bg-blue-500 text-white font-bold px-4 py-2"><div>'+notice_text+'</div></div>')
+    // $('#generic-notice').show();
+
+    // $("#m_timer").countdowntimer({
+    //       size : "xs",
+    //       hours : 00,
+    //       minutes : 00,
+    //       seconds : 03,
+    //       stopButton : "stopBtnhms",
+    //       timeUp : timeisUp
+  	// });
+
+    // var date = new Date(newSeconds * 1000);
+    // var hh = date.getUTCHours();
+    // var mm = date.getUTCMinutes();
+    // var ss = date.getSeconds();
+
 
   }
 
   function timeisUp(){
+    console.log("timeisUp()");
     notice_text = "Sanificazione Completata" ;
     statusNotice(notice_text);
     $('#air-sanification div').toggleClass("bg-orange-400 bg-gray-400");
     $('#air-sanification').removeClass('disabled');
-    $("#given_date .time").countdowntimer("destroy");
+    $("#destroyBtn").trigger("click");
 
+    // $('#air-sanification div').removeClass("bg-green-400");
+    // $('#air-sanification div').addClass("bg-orange-400");
+    // $("#destroyBtn").show();
   }
+
+  // $("#destroyBtn").hide();
+  $("#destroyBtn").click(function() {
+    // $(this).hide();
+    console.log("auto click destroyBtn");
+    $('#generic-notice div').remove();
+    $("#m_timer").countdowntimer("destroy");
+    // $("#given_date .time").countdowntimer("destroy");
+    $('#air-sanification').removeClass("disabled ");
+    $('#air-sanification div').removeClass("bg-orange-400");
+    $('#air-sanification div').addClass("bg-gray-400");
+  });
+
+
+
+
 });
