@@ -16,29 +16,31 @@
   <body class="overflow-hidden">
     <div role="alert" id="generic-notice"></div>
 
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="flex-wrap md:flex content-start bg-gray-200 overflow-hidden">
-          <div class="w-full md:w-1/3 border">
+        <div class="flex md:flex content-start bg-gray-200 overflow-hidden">
+          <div class="flex">
+            <div class="w-1/2 md:w-1/3 border">
             <a href="#" class="btn-cameras hover:no-underline" data-target="#carouselExampleControls" data-slide-to="1" >
               <div class="text-gray-700 text-center bg-gray-400 p-10">
                 Telecamere
               </div>
             </a>
+
           </div>
-          <div class="w-full md:w-1/3 border">
+            <div class="w-1/2 md:w-1/3 border">
             <a href="#" class="btn-services hover:no-underline" data-target="#carouselExampleControls" data-slide-to="2" >
               <div class="text-gray-700 text-center bg-gray-400 p-10">
                 Servizi
               </div>
             </a>
           </div>
-
-          <div class="w-full border">
-            <div class="text-gray-700 text-center bg-gray-400">
-              <?php include 'shared/_webradio.php' ?>
-            </div>
+          </div>
+        </div>
+        <div class="w-full border">
+          <div class="text-gray-700 text-center bg-gray-400">
+            <?php include 'shared/_webradio.php' ?>
           </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0">
@@ -60,14 +62,17 @@
     </div>
   </div>
 
-    <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/jQuery.countdownTimer.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
+    <script src="node_modules/easytimer/dist/easytimer.min.js"></script>
     <!-- <script src="js/raspberry.js"></script> -->
     <script src="js/layout.js"></script>
-    <!-- <script src="js/web-radio.js"></script> -->
+    <script src="js/notice.js"></script>
+    <script src="js/onOff.js"></script>
+    <script src="js/checkStatusServices.js"></script>
+    <!-- <script src="js/countdown.js"></script> -->
+    <!-- <script src="js/sanitization.js"></script> -->
+    <script src="js/webRadio.js"></script>
+
   </body>
 </html>
