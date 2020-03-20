@@ -9,9 +9,9 @@ function getAllButtonId(){
 function onOff(id, data){
   console.log("Stato: " + id + " " + data);
   if(data == 'off'){
-    $('body').find('#'+id).find('div').removeClass("bg-green-400");
+    $('body').find('#'+id).find('div').removeClass("bg-green-500");
     $('body').find('#'+id).find('div').addClass("bg-grey-400");
   }else{
-    $('body').find('#'+id).find('div').addClass("bg-green-400");
+    $('body').find('#'+id).find('div').addClass("bg-green-500");
   }
 }

@@ -51,7 +51,7 @@ function countdown(hours,minutes,seconds){
     notice_text = "Sanificazione Completata"
     notice_color_status =  "bg-green-500";
     $('#air-sanification').removeClass('disabled');
-    $('#air-sanification div').removeClass('bg-green-400');
+    $('#air-sanification div').removeClass('bg-green-500');
     $('#air-sanification div').removeClass('bg-orange-400');
     $('#air-sanification div').addClass('bg-gray-400');
     statusNotice(notice_text, notice_color_status);

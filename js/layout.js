@@ -49,14 +49,14 @@ $(document).ready(function() {
     // $('#modal-air-sanification').on('hidden.bs.modal', function () {
     //   if($("body #countdownSanification").lenght > 0) {
     //     console.log("Si esiste");
-    //     $('#air-sanification div').removeClass("bg-green-400");
+    //     $('#air-sanification div').removeClass("bg-green-500");
     //     $('#air-sanification div').addClass("bg-orange-400");
     //   }else{
     //     console.log("Non esiste");
     //     console.log("Abilita pulsante");
     //
     //     $('#air-sanification').removeClass('disabled');
-    //     $('#air-sanification div').removeClass("bg-green-400");
+    //     $('#air-sanification div').removeClass("bg-green-500");
     //     $('#air-sanification div').addClass("bg-gray-400");
     //   }
     // });
@@ -115,7 +115,7 @@ $(document).ready(function() {
       notice_text = "Sanificazione Completata"
       notice_color_status =  "bg-green-500";
       $('#air-sanification').removeClass('disabled');
-      $('#air-sanification div').removeClass('bg-green-400');
+      $('#air-sanification div').removeClass('bg-green-500');
       $('#air-sanification div').removeClass('bg-orange-400');
       $('#air-sanification div').addClass('bg-gray-400');
       statusNotice(notice_text, notice_color_status);
@@ -137,8 +137,8 @@ $(document).ready(function() {
       console.log("disabilita pulante");
     }
 
-    $('#'+id).find('div').toggleClass("bg-green-400 bg-gray-400");
-    if ($('#'+id).find('div').hasClass('bg-green-400')){
+    $('#'+id).find('div').toggleClass("bg-green-500 bg-gray-400");
+    if ($('#'+id).find('div').hasClass('bg-green-500')){
       status_text = "on";
     }else{
       status_text = "off";

@@ -13,33 +13,54 @@
     <title>GOLIATH - Panel control</title>
   </head>
 
-  <body class="overflow-hidden">
+  <body class="overflow-hidden font-oswald">
     <div role="alert" id="generic-notice"></div>
+    <div class="bg-white-100 relative" role="alert">
+      <div class="flex">
+        <div class="w-1/2">
+          <a href="#" class="home hover:no-underline" data-target="#carouselExampleControls" data-slide-to="0">
+            <div class="p-2">
+              GOLIATH
+            </div>
+          </a>
+        </div>
+        <div class="w-1/2">
+          <div class="flex">
+            <div class="flex-1 p-2 text-center text-xs border-b-4 border-orange-600">
+              11.3V Servizi
+            </div>
+            <div class="flex-1 p-2 text-center text-xs border-b-4 border-green-600">
+              13V Motore
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
+
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="flex md:flex content-start bg-gray-200 overflow-hidden">
-          <div class="flex">
-            <div class="w-1/2 md:w-1/3 border">
+          <div class="w-1/2 md:w-1/3 border-solid border border-gray-600 border-t-0">
             <a href="#" class="btn-cameras hover:no-underline" data-target="#carouselExampleControls" data-slide-to="1" >
-              <div class="text-gray-700 text-center bg-gray-400 p-10">
+              <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
                 Telecamere
               </div>
             </a>
-
           </div>
-            <div class="w-1/2 md:w-1/3 border">
+          <div class="w-1/2 md:w-1/3 border-solid border border-gray-600 border-t-0">
             <a href="#" class="btn-services hover:no-underline" data-target="#carouselExampleControls" data-slide-to="2" >
-              <div class="text-gray-700 text-center bg-gray-400 p-10">
+              <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
                 Servizi
               </div>
             </a>
           </div>
-          </div>
         </div>
         <div class="w-full border">
-          <div class="text-gray-700 text-center bg-gray-400">
+          <div class="text-gray-200 text-center bg-gray-900">
             <?php include 'shared/_webradio.php' ?>
           </div>
         </div>
