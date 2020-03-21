@@ -1,0 +1,40 @@
+{
+  "radioItaliane" : [
+    {
+      "name" : "English",
+      "url" : "http://icecast.unitedradio.it/Virgin.mp3"
+    },
+    {
+      "name" : "France",
+      "url" : "http://wma07.fluidstream.net:3616/;stream.nsv"
+      },
+    {
+      "name" : "Spain",
+      "url" : "http://stream1.rds.it:8000/rds64k"
+    },
+    {
+      "name" : "R101",
+      "url" : "http://icecast.unitedradio.it/r101"
+    },
+    {
+      "name" : "Radio Monte Carlo",
+      "url" : "http://edge.radiomontecarlo.net/RMC.mp3"
+    },
+    {
+      "name" : "asdasd",
+      "url" : "http://icecast.unitedradio.it/Virgin.mp3"
+    },
+    {
+      "name" : "F123123rance",
+      "url" : "http://wma07.fluidstream.net:3616/;stream.nsv"
+      },
+    {
+      "name" : "Spsdvvcvain",
+      "url" : "http://stream1.rds.it:8000/rds64k"
+    },
+    {
+      "name" : "R1asdaa01",
+      "url" : "http://icecast.unitedradio.it/r101"
+    }
+  ]
+}

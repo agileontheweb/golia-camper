@@ -1,85 +1,99 @@
 <!doctype html>
-
-<?php
-$command = escapeshellcmd('py/monitor-temp.py');
-$output = shell_exec($command);
-echo $output;
-
-?>
-
-
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Golia Camper Dashboard</title>
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="scss/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>GOLIATH - Panel control</title>
   </head>
-  <body>
-    <main role="main">
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-sm  -4">
-            <h2>Temperature Cpu Raspberry</h2>
-            <div id="temperature-cpu"></div>
-            <!-- <form action = "py/monitor-temp.py" method = "POST">
-              <input type = "submit" value = "Run the Program!!!">
-            </form> -->
 
-          </div>
-
-          <div class="col-sm  -4">
-            <div class="googlemap">
-              <h2>Retro</h2>
-              <p>
-                Quando inserisco la retro si attiva la telecamera dietro
-                <div class="camper-top-view">
-                  <img src=""/>
-                  <div class="sensor-back-center">
-                    <?#php
-                      #$temp = exec('py/ultrasonic_distance.py');
-                      #echo "$temp test";
-                    #?>
-
-                    <div id="ulstrasonic-sensor"></div>
-
-                  </div>
-                </div>
-                <br />
-                o diventa conta km
-              </p>
+  <body class="overflow-hidden font-oswald">
+    <div role="alert" id="generic-notice"></div>
+    <div class="bg-white-100 relative" role="alert">
+      <div class="flex">
+        <div class="w-1/2">
+          <a href="#" class="home hover:no-underline" data-target="#carouselExampleControls" data-slide-to="0">
+            <div class="p-2">
+              GOLIATH
             </div>
-          </div>
-
-          <div class="col-sm  -4">
-
-            <div class="googlemap">
-              <h2>Mappa</h2>
-            </div>
-
-            <?php
-              $command = escapeshellcmd('py/led.py');
-              $output = shell_exec($command);
-              echo $output;
-              echo "ss"
-            ?>
-          </div>
-          <!-- <div class="col-md-4">
-            <h2>Giveme position</h2>
-            <div id="map"></div>
-            <p id="demo"></p>
-            <p><a class="btn btn-secondary" href="#" id="getPosition" role="button">position</a></p>
-          </div> -->
+          </a>
         </div>
-        <hr>
+        <div class="w-1/2">
+          <div class="flex">
+            <div class="flex-1 p-2 text-center text-xs border-b-4 border-orange-600">
+              11.3V Servizi
+            </div>
+            <div class="flex-1 p-2 text-center text-xs border-b-4 border-green-600">
+              13V Motore
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
-    <?php include 'shared/footer.php' ?>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI7LlKH8pWqfJgvOJX9Eshaa2UfNC0McE"></script>
+    </div>
+
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="flex md:flex content-start bg-gray-200 overflow-hidden">
+          <div class="w-1/2 md:w-1/3 border-solid border border-gray-600 border-t-0">
+            <a href="#" class="btn-cameras hover:no-underline" data-target="#carouselExampleControls" data-slide-to="1" >
+              <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
+                Telecamere
+              </div>
+            </a>
+          </div>
+          <div class="w-1/2 md:w-1/3 border-solid border border-gray-600 border-t-0">
+            <a href="#" class="btn-services hover:no-underline" data-target="#carouselExampleControls" data-slide-to="2" >
+              <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
+                Servizi
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="w-full border">
+          <div class="text-gray-200 text-center bg-gray-900">
+            <?php include 'shared/_webradio.php' ?>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+          <div class="border">
+            <a href="#">
+              <div class="text-gray-400 text-center bg-gray-800">
+                Test Goliath
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item section-cameras">
+        <?php include 'pages/camera.php'?>
+      </div>
+      <div class="carousel-item">
+        <?php include 'pages/service.php'?>
+      </div>
+    </div>
+  </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/easytimer/dist/easytimer.min.js"></script>
+    <!-- <script src="js/raspberry.js"></script> -->
+    <script src="js/layout.js"></script>
+    <script src="js/notice.js"></script>
+    <script src="js/onOff.js"></script>
+    <script src="js/checkStatusServices.js"></script>
+    <!-- <script src="js/countdown.js"></script> -->
+    <!-- <script src="js/sanitization.js"></script> -->
+    <script src="js/webRadio.js"></script>
 
   </body>
 </html>

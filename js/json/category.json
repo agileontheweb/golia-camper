@@ -1,0 +1,16 @@
+{
+  "typeOfMusic" : [
+    {
+      "name" : "Jazz"
+    },
+    {
+      "name" : "Electronic"
+    },
+    {
+      "name" : "Rock"
+    },
+    {
+      "name" : "Ragge"
+    }
+  ]
+}
