@@ -1,5 +1,4 @@
 <?php
-  echo "entro";
-  $command = escapeshellcmd('python ../py/reboot-raspberry.py');
-  $output = shell_exec($command);
+  echo "Riavvio il raspberry";
+  exec('sudo python /var/www/html/golia-camper/py/reboot-raspberry.py');
 ?>
