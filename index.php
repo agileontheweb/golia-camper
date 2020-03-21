@@ -86,12 +86,11 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/easytimer/dist/easytimer.min.js"></script>
-    <!-- <script src="js/raspberry.js"></script> -->
     <script src="js/layout.js"></script>
     <script src="js/notice.js"></script>
     <script src="js/onOff.js"></script>
     <script src="js/checkStatusServices.js"></script>
-    <!-- <script src="js/countdown.js"></script> -->
+    <script src="js/raspberry.js"></script>
     <!-- <script src="js/sanitization.js"></script> -->
     <script src="js/webRadio.js"></script>
 

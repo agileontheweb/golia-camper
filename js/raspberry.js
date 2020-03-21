@@ -1,12 +1,12 @@
 $(document).ready(function() {
   console.log("Init Raspberry")
-  initAnalogicShutDownRaspberry();
+  // initAnalogicShutDownRaspberry();
 
   $('.reboot-raspberry').click(function() {
     console.log("Reboot Raspberry");
     rebootRaspberry()
   });
-
+  //
   $('.shutdown-raspberry').on('click', function(event) {
     console.log("Shutdown Raspberry");
     shutdownRaspberry();
@@ -15,12 +15,12 @@ $(document).ready(function() {
   function rebootRaspberry(){
     $.ajax({
       type: "POST",
-      url: "../py/reboot-raspberry.py"
+      url: "./py/reboot-raspberry.py"
     }).done(function( o ) {
        console.log("Init Reboot Raspberry " + o)
     });
   }
-
+  //
   function shutdownRaspberry(){
     $.ajax({
       type: "POST",
@@ -30,12 +30,12 @@ $(document).ready(function() {
     });
   }
 
-  function initAnalogicShutDownRaspberry(){
-    $.ajax({
-      type: "POST",
-      url: "./php/shutdown-raspberry.py"
-    }).done(function( o ) {
-       console.log("Init analogic shutdown button Raspberry")
-    });
-  }
+  // function initAnalogicShutDownRaspberry(){
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "./php/shutdown-raspberry.py"
+  //   }).done(function( o ) {
+  //      console.log("Init analogic shutdown button Raspberry")
+  //   });
+  // }
 });
