@@ -13,9 +13,10 @@ $(document).ready(function() {
   });
 
   function rebootRaspberry(){
+	console.log("DAI FAI IL reboot")
     $.ajax({
       type: "POST",
-      url: "./py/reboot-raspberry.py"
+      url: "./php/reboot-raspberry.php"
     }).done(function( o ) {
        console.log("Init Reboot Raspberry " + o)
     });
