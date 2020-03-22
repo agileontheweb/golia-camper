@@ -15,3 +15,12 @@ function onOff(id, data){
     $('body').find('#'+id).find('div').addClass("bg-green-500");
   }
 }
+
+function checkPhisicalButtons(){
+  $.ajax({
+    type: "POST",
+    url: "./php/check-phisical-buttons.php"
+  }).done(function( o ) {
+     console.log("Push Phisical button " + o)
+  });
+}
