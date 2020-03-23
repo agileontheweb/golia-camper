@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import os
 import time
 
@@ -10,6 +8,6 @@ def measure_temp():
 while True:
         print(measure_temp())
         time.sleep(1)
-        f = open('monitor-temp.txt','w')
+        f = open('../txt/temper-raspberry.txt','w')
         f.write(measure_temp())
         f.close()
