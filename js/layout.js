@@ -10,6 +10,15 @@ $(document).ready(function() {
   getAllButtonId();
   checkPhisicalButtons();
 
+
+  function lightDinetteModal(){
+    console.log("open lightDinetteModal")
+    $('#modal-light-dinette').modal();
+  };
+  function lightBackModal(){
+    console.log("open lightBackModal")
+    $('#modal-back-door').modal();
+  };
   function sanificationModal(){
     $('#modal-air-sanification').modal();
     $('#modal-air-sanification').on('shown.bs.modal', function () {
@@ -136,6 +145,14 @@ $(document).ready(function() {
       sanificationModal();
       $('a#air-sanification').addClass('disabled');
       console.log("disabilita pulante");
+    }
+
+    if(id == 'light-dinette'){
+      lightDinetteModal();
+    }
+
+    if(id == 'light-back'){
+      lightBackModal();
     }
 
     $('#'+id).find('div').toggleClass("bg-green-500 bg-gray-400");

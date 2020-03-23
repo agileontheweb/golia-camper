@@ -44,47 +44,149 @@
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
 
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="flex md:flex content-start bg-gray-200 overflow-hidden">
-          <div class="w-1/2 md:w-1/3 border-solid border border-gray-600 border-t-0">
-            <a href="#" class="btn-cameras hover:no-underline" data-target="#carouselExampleControls" data-slide-to="1" >
-              <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
-                Telecamere
-              </div>
-            </a>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <?#php include 'pages/service.php'?>
+          <div class="flex md:flex content-start bg-gray-200 overflow-hidden">
+            <div class="w-1/2 md:w-1/3 border-r border-solid">
+              <a href="#" class="btn-cameras hover:no-underline" data-target="#carouselExampleControls" data-slide-to="1" >
+                <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
+                  Telecamere
+                </div>
+              </a>
+            </div>
+            <div class="w-1/2 md:w-1/3 border-r border-solid">
+              <a href="#" class="btn-services hover:no-underline" data-target="#carouselExampleControls" data-slide-to="2" >
+                <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
+                  Servizi
+                </div>
+              </a>
+            </div>
+            <div class="w-1/2 md:w-1/3">
+              <a href="#" class="btn-cameras hover:no-underline" data-target="#carouselExampleControls" data-slide-to="3" >
+                <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
+                  Radio
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="w-1/2 md:w-1/3 border-solid border border-gray-600 border-t-0">
-            <a href="#" class="btn-services hover:no-underline" data-target="#carouselExampleControls" data-slide-to="2" >
-              <div class="text-gray-200 text-center bg-gray-900 px-3 py-5">
-                Servizi
-              </div>
-            </a>
-          </div>
+
+          
+          <?php include 'pages/_light.php'?>
+          <?php include 'pages/_service.php'?>
         </div>
-        <div class="w-full border">
-          <div class="text-gray-200 text-center bg-gray-900">
-            <?php include 'shared/_webradio.php' ?>
-          </div>
+        <div class="carousel-item">
+          <?php include 'pages/camera.php'?>
         </div>
-        <div class="absolute bottom-0 left-0 right-0">
-          <div class="border">
-            <a href="#">
-              <div class="text-gray-400 text-center bg-gray-800">
-                Test Goliath
-              </div>
-            </a>
-          </div>
+        <div class="carousel-item">
+          <?php include 'pages/service.php'?>
         </div>
-      </div>
-      <div class="carousel-item section-cameras">
-        <?php include 'pages/camera.php'?>
-      </div>
-      <div class="carousel-item">
-        <?php include 'pages/service.php'?>
+        <div class="carousel-item">
+          <?php include 'shared/_webradio.php' ?>
+        </div>
       </div>
     </div>
-  </div>
+
+    <div class="modal fade" id="modal-air-sanification" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sanificazione aria</h5>
+          </div>
+          <div class="modal-body">
+            <div class="bg-orange-500 text-white font-bold px-4 py-2">
+              Attenzione: Impostare durata sanificazione.
+            </div>
+            <label class="block mt-4">
+              <select class="sanification-timer form-select mt-1 block py-4 w-full">
+                <option value="00:00:2" selected>2 sec</option>
+                <option value="00:10:00">10 Min</option>
+                <option value="00:20:00">20 Min</option>
+                <option value="00:30:00">30 Min</option>
+                <option value="00:40:00">40 Min</option>
+                <option value="00:50:00">50 Min</option>
+                <option value="01:00:00">1 ora</option>
+                <option value="01:30:00">1 ora 30 Min</option>
+              </select>
+            </label>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">chiudi</button>
+            <button type="button" id="btn-confirm" class="btn btn-primary">Confermo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-light-dinette" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Luci Dinette</h5>
+          </div>
+          <div class="modal-body">
+            <div class="py-2">
+              <div class="flex">
+                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
+                  <a href="#" id="light-ceiling" class="hover:no-underline">
+                    <div class="text-gray-200 text-center bg-gray-900 p-3">
+                      Soffitto
+                    </div>
+                  </a>
+                </div>
+                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
+                  <a href="#" id="light-window" class="hover:no-underline">
+                    <div class="text-gray-200 text-center bg-gray-900 p-3">
+                      Finestra
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-back-door" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Posteriore</h5>
+          </div>
+          <div class="modal-body">
+            <div class="py-2">
+              <div class="flex">
+                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
+                  <a href="#" id="light-ceiling" class="hover:no-underline">
+                    <div class="text-gray-200 text-center bg-gray-900 p-3">
+                      Soffitto
+                    </div>
+                  </a>
+                </div>
+                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
+                  <a href="#" id="light-window" class="hover:no-underline">
+                    <div class="text-gray-200 text-center bg-gray-900 p-3">
+                      Finestra
+                    </div>
+                  </a>
+                </div>
+                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
+                  <a href="#" id="light-left" class="hover:no-underline">
+                    <div class="text-gray-200 text-center bg-gray-900 p-3">
+                      Laterale
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

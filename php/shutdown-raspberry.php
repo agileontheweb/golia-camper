@@ -1,4 +1,3 @@
 <?php
-  echo "Riavvio il raspberry";
-  exec('sudo python /var/www/html/golia-camper/py/shutdown-raspberry.py');
+  echo "Command output is " . shell_exec("python /var/www/html/golia-camper/py/shutdown-raspberry.py");
 ?>
