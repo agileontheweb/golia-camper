@@ -1,20 +1,18 @@
 $(document).ready(function() {
   console.log("Init Raspberry")
   // initAnalogicShutDownRaspberry();
-  tempRaspberry();
+
+setInterval(function() {
+    tempRaspberry();
+},1000);
 
   function tempRaspberry(){
-	   console.log("Dammi temperatura rasp")
-     temp="";
      $.ajax({
        type: "POST",
        url: "./php/temp-raspberry.php"
      }).done(function( o ) {
-        console.log("Init temp Raspberry " + o)
-        // temp = o;
+      $('body').find('.rasp-temperature').html(o);
       });
-    $('body').find('.rasp-temperature').html(temp);
-
   }
 
   $('.reboot-raspberry').click(function() {
