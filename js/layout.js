@@ -8,6 +8,7 @@ $(document).ready(function() {
   statusNotice();
   checkStatusServices();
   getAllButtonId();
+  checkPhisicalButtons();
 
   function sanificationModal(){
     $('#modal-air-sanification').modal();

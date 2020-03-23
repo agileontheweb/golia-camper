@@ -17,6 +17,7 @@ function onOff(id, data){
 }
 
 function checkPhisicalButtons(){
+  console.log("PHISICAL BUTTONS");
   $.ajax({
     type: "POST",
     url: "./php/check-phisical-buttons.php"
@@ -24,3 +25,4 @@ function checkPhisicalButtons(){
      console.log("Push Phisical button " + o)
   });
 }
+
