@@ -10,6 +10,10 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
+
+    <link rel="manifest" href="manifest.json">
+    <script src="js/service-worker.js"></script>
+
     <title>GOLIATH - Panel control</title>
   </head>
 
@@ -71,7 +75,7 @@
             </div>
           </div>
 
-          
+
           <?php include 'pages/_light.php'?>
           <?php include 'pages/_service.php'?>
         </div>
