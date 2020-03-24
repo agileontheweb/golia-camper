@@ -1,6 +1,5 @@
 
 function sanificationModal(){
-  console.log("sanificationModal FUCK");
   $('#modal-air-sanification').modal();
   $('#modal-air-sanification').on('shown.bs.modal', function () {
     var timer;

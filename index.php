@@ -74,10 +74,9 @@
               </a>
             </div>
           </div>
-
-
           <?php include 'pages/_light.php'?>
           <?php include 'pages/_service.php'?>
+          <?php include 'pages/_light_out.php'?>
         </div>
         <div class="carousel-item">
           <?php include 'pages/camera.php'?>
@@ -91,139 +90,9 @@
       </div>
     </div>
 
-    <div class="modal fade" id="modal-air-sanification" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Sanificazione aria</h5>
-          </div>
-          <div class="modal-body">
-            <div class="bg-orange-500 text-white font-bold px-4 py-2">
-              Attenzione: Impostare durata sanificazione.
-            </div>
-            <label class="block mt-4">
-              <select class="sanification-timer form-select mt-1 block py-4 w-full">
-                <option value="00:00:2" selected>2 sec</option>
-                <option value="00:10:00">10 Min</option>
-                <option value="00:20:00">20 Min</option>
-                <option value="00:30:00">30 Min</option>
-                <option value="00:40:00">40 Min</option>
-                <option value="00:50:00">50 Min</option>
-                <option value="01:00:00">1 ora</option>
-                <option value="01:30:00">1 ora 30 Min</option>
-              </select>
-            </label>
 
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">chiudi</button>
-            <button type="button" id="btn-confirm" class="btn btn-primary">Confermo</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php include 'pages/_modal.php'?>
 
-    <div class="modal fade" id="modal-light-dinette" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Luci Dinette</h5>
-          </div>
-          <div class="modal-body">
-            <div class="py-2">
-              <div class="flex">
-                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="light-ceiling" class="hover:no-underline">
-                    <div class="text-gray-200 text-center bg-gray-900 p-3">
-                      Soffitto
-                    </div>
-                  </a>
-                </div>
-                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="light-window" class="hover:no-underline">
-                    <div class="text-gray-200 text-center bg-gray-900 p-3">
-                      Finestra
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="modal-back-door" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Posteriore</h5>
-          </div>
-          <div class="modal-body">
-            <div class="py-2">
-              <div class="flex">
-                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="back-light-ceiling" class="hover:no-underline">
-                    <div class="text-gray-200 text-center bg-gray-900 p-3">
-                      Soffitto
-                    </div>
-                  </a>
-                </div>
-                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="back-light-window" class="hover:no-underline">
-                    <div class="text-gray-200 text-center bg-gray-900 p-3">
-                      Finestra
-                    </div>
-                  </a>
-                </div>
-                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="back-window-hatchback" class="hover:no-underline">
-                    <div class="text-gray-200 text-center bg-gray-900 p-3">
-                      Laterale
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="modal-perfume" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Profumo</h5>
-          </div>
-          <div class="modal-body">
-            <div class="py-2">
-              <div class="flex">
-                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="perfume-timer" class="hover:no-underline">
-                    <div class="text-gray-200 text-center bg-gray-900 p-3">
-                      Tempo
-                    </div>
-                  </a>
-                </div>
-                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="perfume-light" class="hover:no-underline">
-                    <div class="text-gray-200 text-center bg-gray-900 p-3">
-                      Luce
-                    </div>
-                  </a>
-                </div>
-                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="back-window-hatchback" class="hover:no-underline">
-                    <div class="text-gray-200 text-center bg-gray-900 p-3">
-                      Laterale
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

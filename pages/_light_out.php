@@ -1,28 +1,28 @@
 <div class="flex bg-gray-200 px-3 py-1">
   <div class="flex">
-    <p>Luci </p>
+    <p>Luci Esterne</p>
   </div>
 </div>
 <div class="flex flex-wrap">
   <div class="w-1/3 border-r border-solid">
-    <a href="#" id="lights-dinette" class="hover:no-underline">
+    <a href="#" id="out-lights-door" class="hover:no-underline">
       <div class="text-gray-200 text-center bg-gray-900 p-3">
-        Dinette
+        Porta
       </div>
     </a>
   </div>
   <div class="w-1/3 border-r border-solid">
-    <a href="#" id="light-kitchen" class="hover:no-underline">
+    <a href="#" id="out-lights-front" class="hover:no-underline">
       <div class="text-gray-200 text-center bg-gray-900 p-3">
-        Cucina
+        Frontali
       </div>
     </a>
   </div>
 
   <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-    <a href="#" id="lights-back" class="hover:no-underline">
+    <a href="#" id="out-lights-back" class="hover:no-underline">
       <div class="text-gray-200 text-center bg-gray-900 p-3">
-        Posteriore
+        Posteriori
       </div>
     </a>
   </div>

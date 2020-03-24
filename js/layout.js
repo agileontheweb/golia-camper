@@ -11,23 +11,17 @@ $(document).ready(function() {
   checkPhisicalButtons();
 
 
-  function lightDinetteModal(){
-    console.log("open lightDinetteModal")
-    $('#modal-light-dinette').modal();
-  };
-
-  function lightBackModal(){
-    console.log("open lightBackModal")
-    $('#modal-back-door').modal();
-  };
-
-  function perfumeModal(){
-    console.log("open Modal perfume")
-    $('#modal-perfume').modal();
-  };
+  function checkModal(id){
+    id = $(this).attr("id");
+    $("body").find(".modal").attr("id", "modal-" + id);
+    $('#modal-'+id).load('./pages/_modal-'+id+'.php');
+    $('#modal-'+id).modal();
+    if($('#modal-air-sanification')){
+      sanificationModal();
+    }
+  }
 
   function sanificationModal(){
-    $('#modal-air-sanification').modal();
     $('#modal-air-sanification').on('shown.bs.modal', function () {
       var timer;
       timer = $("select.sanification-timer").children("option:selected").val();
@@ -63,20 +57,20 @@ $(document).ready(function() {
       });
     })
     //
-    // $('#modal-air-sanification').on('hidden.bs.modal', function () {
-    //   if($("body #countdownSanification").lenght > 0) {
-    //     console.log("Si esiste");
-    //     $('#air-sanification div').removeClass("bg-green-500");
-    //     $('#air-sanification div').addClass("bg-orange-400");
-    //   }else{
-    //     console.log("Non esiste");
-    //     console.log("Abilita pulsante");
-    //
-    //     $('#air-sanification').removeClass('disabled');
-    //     $('#air-sanification div').removeClass("bg-green-500");
-    //     $('#air-sanification div').addClass("bg-gray-400");
-    //   }
-    // });
+    $('#modal-air-sanification').on('hidden.bs.modal', function () {
+      if($("body #countdownSanification").lenght > 0) {
+        console.log("Si esiste");
+        $('#air-sanification div').removeClass("bg-green-500");
+        $('#air-sanification div').addClass("bg-orange-400");
+      }else{
+        console.log("Non esiste");
+        console.log("Abilita pulsante");
+
+        $('#air-sanification').removeClass('disabled');
+        $('#air-sanification div').removeClass("bg-green-500");
+        $('#air-sanification div').addClass("bg-gray-400");
+      }
+    });
   }
 
   function countdown(hours,minutes,seconds){
@@ -149,24 +143,21 @@ $(document).ready(function() {
     id = $(this).attr("id");
 
     if(id == 'air-sanification'){
-      sanificationModal();
+      checkModal(id);
       $('a#air-sanification').addClass('disabled');
-      console.log("disabilita pulante");
     }
 
     if(id == 'lights-dinette'){
-      lightDinetteModal();
+      checkModal(id);
     }
 
-    if(id == 'light-back'){
-      lightBackModal();
+    if(id == 'lights-back'){
+      checkModal(id)
     }
 
     if(id == 'perfume'){
-      perfumeModal()
+      checkModal(id)
     }
-
-
 
     $('#'+id).find('div').toggleClass("bg-green-500 bg-gray-400");
     if ($('#'+id).find('div').hasClass('bg-green-500')){
