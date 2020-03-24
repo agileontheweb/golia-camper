@@ -4,7 +4,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(23,GPIO.OUT)
 
-f = open("../txt/light-dinette.txt", "r")
+f = open("../txt/light-ceiling.txt", "r")
 c = f.read()
 f.close()
 

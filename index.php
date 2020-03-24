@@ -152,7 +152,6 @@
         </div>
       </div>
     </div>
-
     <div class="modal fade" id="modal-back-door" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -163,21 +162,21 @@
             <div class="py-2">
               <div class="flex">
                 <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="light-ceiling" class="hover:no-underline">
+                  <a href="#" id="back-light-ceiling" class="hover:no-underline">
                     <div class="text-gray-200 text-center bg-gray-900 p-3">
                       Soffitto
                     </div>
                   </a>
                 </div>
                 <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="light-window" class="hover:no-underline">
+                  <a href="#" id="back-light-window" class="hover:no-underline">
                     <div class="text-gray-200 text-center bg-gray-900 p-3">
                       Finestra
                     </div>
                   </a>
                 </div>
                 <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-                  <a href="#" id="light-left" class="hover:no-underline">
+                  <a href="#" id="back-window-hatchback" class="hover:no-underline">
                     <div class="text-gray-200 text-center bg-gray-900 p-3">
                       Laterale
                     </div>
@@ -189,8 +188,42 @@
         </div>
       </div>
     </div>
-
-
+    <div class="modal fade" id="modal-perfume" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Profumo</h5>
+          </div>
+          <div class="modal-body">
+            <div class="py-2">
+              <div class="flex">
+                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
+                  <a href="#" id="perfume-timer" class="hover:no-underline">
+                    <div class="text-gray-200 text-center bg-gray-900 p-3">
+                      Tempo
+                    </div>
+                  </a>
+                </div>
+                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
+                  <a href="#" id="perfume-light" class="hover:no-underline">
+                    <div class="text-gray-200 text-center bg-gray-900 p-3">
+                      Luce
+                    </div>
+                  </a>
+                </div>
+                <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
+                  <a href="#" id="back-window-hatchback" class="hover:no-underline">
+                    <div class="text-gray-200 text-center bg-gray-900 p-3">
+                      Laterale
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

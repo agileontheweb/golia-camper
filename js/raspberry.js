@@ -2,9 +2,9 @@ $(document).ready(function() {
   console.log("Init Raspberry")
   // initAnalogicShutDownRaspberry();
 
-setInterval(function() {
-    tempRaspberry();
-},1000);
+  // setInterval(function() {
+  //     tempRaspberry();
+  // },1000);
 
   function tempRaspberry(){
      $.ajax({

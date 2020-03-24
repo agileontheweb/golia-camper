@@ -15,10 +15,17 @@ $(document).ready(function() {
     console.log("open lightDinetteModal")
     $('#modal-light-dinette').modal();
   };
+
   function lightBackModal(){
     console.log("open lightBackModal")
     $('#modal-back-door').modal();
   };
+
+  function perfumeModal(){
+    console.log("open Modal perfume")
+    $('#modal-perfume').modal();
+  };
+
   function sanificationModal(){
     $('#modal-air-sanification').modal();
     $('#modal-air-sanification').on('shown.bs.modal', function () {
@@ -147,13 +154,19 @@ $(document).ready(function() {
       console.log("disabilita pulante");
     }
 
-    if(id == 'light-dinette'){
+    if(id == 'lights-dinette'){
       lightDinetteModal();
     }
 
     if(id == 'light-back'){
       lightBackModal();
     }
+
+    if(id == 'perfume'){
+      perfumeModal()
+    }
+
+
 
     $('#'+id).find('div').toggleClass("bg-green-500 bg-gray-400");
     if ($('#'+id).find('div').hasClass('bg-green-500')){
