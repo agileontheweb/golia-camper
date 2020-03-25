@@ -141,6 +141,7 @@ $(document).ready(function() {
   $(document).on( "click", "a:not(.disabled)", function(event) {
     event.preventDefault();
     id = $(this).attr("id");
+    pin = $(this).attr("data-pin");
 
     if(id == 'air-sanification'){
       checkModal(id);
@@ -171,10 +172,10 @@ $(document).ready(function() {
       url: '/golia-camper/php/onoff.php',
       cache: 'false',
       data: {
-        'status_text' : status_text, 'id': id},
+        'status_text' : status_text, 'id': id, "data-pin": pin},
           dataType: "text",
           success: function(data) {
-            console.log(status_text, id);
+            console.log("stato: " + status_text, "id:" + id, "pin: " + pin);
           },
           error: function(request, status, error) {
           console.log("failed");

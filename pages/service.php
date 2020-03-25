@@ -6,14 +6,14 @@
   </div>
   <div class="flex bg-gray-200">
     <div class="w-1/2 border-r border-solid">
-      <a href="#" id="air-sanification" class="hover:no-underline">
+      <a href="#" id="air-sanification" data-pin="" class="hover:no-underline">
         <div class="text-gray-200 text-center bg-gray-900 p-3">
           Aria
         </div>
       </a>
     </div>
     <div class="w-1/2">
-      <a href="#" id="water-sanification" class="hover:no-underline">
+      <a href="#" id="water-sanification"  class="hover:no-underline">
         <div class="text-gray-200 text-center bg-gray-900 p-3">
           Acqua
         </div>
