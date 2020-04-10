@@ -17,12 +17,11 @@ def power():
  print "Profumo off"
  GPIO.output(26,GPIO.LOW)
 
-def time():
+def set_time():
  print "cambio durata"
  GPIO.output(26,GPIO.HIGH)
  time.sleep(0.5)
  GPIO.output(26,GPIO.LOW)
-
 
 def light():
  print "cambio luce"
@@ -31,8 +30,8 @@ def light():
  GPIO.output(19,GPIO.LOW)
 
 if status == "power":
-    power()
-if status == "time":
-    time()
-if status == "light":
-    light()
+ power()
+elif status == "time":
+  set_time()
+elif status == "light":
+  light()
