@@ -160,6 +160,21 @@ $(document).ready(function() {
       checkModal(id)
     }
 
+    if(id == 'perfume-timer'){
+      console.log("Profumo timer");
+      perfumePower();
+    }
+
+    function perfumePower(){
+      console.log("Perfume power")
+      $.ajax({
+        type: "POST",
+        url: "./php/perfume-power.php"
+      }).done(function( o ) {
+         console.log("perfume power " + o)
+      });
+    }
+
     $('#'+id).find('div').toggleClass("bg-green-500 bg-gray-400");
     if ($('#'+id).find('div').hasClass('bg-green-500')){
       status_text = "on";
@@ -167,19 +182,23 @@ $(document).ready(function() {
       status_text = "off";
     }
 
-    $.ajax({
-      type:'post',
-      url: '/golia-camper/php/onoff.php',
-      cache: 'false',
-      data: {
-        'status_text' : status_text, 'id': id, "data-pin": pin},
-          dataType: "text",
-          success: function(data) {
-            console.log("stato: " + status_text, "id:" + id, "pin: " + pin);
-          },
-          error: function(request, status, error) {
-          console.log("failed");
-        }
-    });
+    function inejctOnOff(){
+      $.ajax({
+        type:'post',
+        url: '/golia-camper/php/onoff.php',
+        cache: 'false',
+        data: {
+          'status_text' : status_text, 'id': id, "data-pin": pin},
+            dataType: "text",
+            success: function(data) {
+              console.log("stato: " + status_text, "id:" + id, "pin: " + pin);
+            },
+            error: function(request, status, error) {
+            console.log("failed");
+          }
+      });
+    }
   });
+
+
 });

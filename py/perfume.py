@@ -4,13 +4,15 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(12,GPIO.OUT)
 
-f = open("../txt/perfume.txt", "r")
-c = f.read()
-f.close()
+GPIO.output(12, GPIO.HIGH)
 
-if c=="on":
- print 'led on'
- GPIO.output(12, GPIO.HIGH)
-else:
- print "led off"
- GPIO.output(12,GPIO.LOW)
+# f = open("../txt/perfume.txt", "r")
+# c = f.read()
+# f.close()
+#
+# if c=="on":
+#  print 'led on'
+#  GPIO.output(12, GPIO.HIGH)
+# else:
+#  print "led off"
+#  GPIO.output(12,GPIO.LOW)

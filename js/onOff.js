@@ -25,4 +25,3 @@ function checkPhisicalButtons(){
      console.log("Push Phisical button " + o)
   });
 }
-
