@@ -8,6 +8,8 @@ GPIO.setwarnings(False)
 GPIO.setup(26,GPIO.OUT)
 GPIO.setup(19,GPIO.OUT)
 
+status = sys.argv[1]
+
 def power():
  print "Profumo on"
  GPIO.output(26,GPIO.HIGH)
@@ -15,7 +17,7 @@ def power():
  print "Profumo off"
  GPIO.output(26,GPIO.LOW)
 
-def min():
+def time():
  print "cambio durata"
  GPIO.output(26,GPIO.HIGH)
  time.sleep(0.5)
@@ -25,10 +27,12 @@ def min():
 def light():
  print "cambio luce"
  GPIO.output(19,GPIO.HIGH)
- time.sleep(0.5)   
+ time.sleep(0.5)
  GPIO.output(19,GPIO.LOW)
-
-status = sys.argv[1]
 
 if status == "power":
     power()
+if status == "time":
+    time()
+if status == "light":
+    light()

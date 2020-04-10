@@ -160,18 +160,36 @@ $(document).ready(function() {
       checkModal(id)
     }
 
-    if(id == 'perfume-timer'){
-      console.log("Profumo timer");
-      perfumePower();
+    if(id == 'perfume-power'){
+      console.log("Profumo power");
+      perfumePower("power");
     }
 
-    function perfumePower(){
-      console.log("Perfume power")
+    if(id == 'perfume-time'){
+      console.log("Profumo time");
+      perfumePower("time");
+    }
+    if(id == 'perfume-light'){
+      console.log("Profumo light");
+      perfumePower("light");
+    }
+
+
+
+    function perfumePower(status_perfume){
+      console.log("lo stato del profumo e: " + status_perfume);
       $.ajax({
         type: "POST",
-        url: "./php/perfume-power.php"
-      }).done(function( o ) {
-         console.log("perfume power " + o)
+        url: "./php/perfume-power.php",
+        data: {
+          'status_perfume' : status_perfume },
+            dataType: "text",
+            success: function(data) {
+              console.log("stato: " + status_perfume);
+            },
+            error: function(request, status, error) {
+            console.log("failed");
+          }
       });
     }
 
