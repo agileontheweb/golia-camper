@@ -143,7 +143,7 @@ $(document).ready(function() {
     event.preventDefault();
     id = $(this).attr("id");
     pin = $(this).attr("data-pin");
-
+    console.log("CLICKTEST");
     if(id == 'air-sanification'){
       checkModal(id);
       $('a#air-sanification').addClass('disabled');
@@ -215,5 +215,4 @@ $(document).ready(function() {
         }
     });
   });
-
 });
