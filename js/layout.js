@@ -9,6 +9,7 @@ $(document).ready(function() {
   checkStatusServices();
   getAllButtonId();
   checkPhisicalButtons();
+  door();
 
 
   function checkModal(id){
@@ -169,12 +170,11 @@ $(document).ready(function() {
       console.log("Profumo time");
       perfumePower("time");
     }
+
     if(id == 'perfume-light'){
-      console.log("Profumo light");
+      console.log("Profumo time");
       perfumePower("light");
     }
-
-
 
     function perfumePower(status_perfume){
       console.log("lo stato del profumo e: " + status_perfume);
@@ -200,23 +200,20 @@ $(document).ready(function() {
       status_text = "off";
     }
 
-    function inejctOnOff(){
-      $.ajax({
-        type:'post',
-        url: '/golia-camper/php/onoff.php',
-        cache: 'false',
-        data: {
-          'status_text' : status_text, 'id': id, "data-pin": pin},
-            dataType: "text",
-            success: function(data) {
-              console.log("stato: " + status_text, "id:" + id, "pin: " + pin);
-            },
-            error: function(request, status, error) {
-            console.log("failed");
-          }
-      });
-    }
+    $.ajax({
+      type:'post',
+      url: '/golia-camper/php/onoff.php',
+      cache: 'false',
+      data: {
+        'status_text' : status_text, 'id': id, "data-pin": pin},
+          dataType: "text",
+          success: function(data) {
+            console.log("stato: " + status_text, "id:" + id, "pin: " + pin);
+          },
+          error: function(request, status, error) {
+          console.log("failed");
+        }
+    });
   });
-
 
 });

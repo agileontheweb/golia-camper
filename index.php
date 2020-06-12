@@ -100,10 +100,12 @@
     <script src="js/layout.js"></script>
     <script src="js/notice.js"></script>
     <script src="js/onOff.js"></script>
+    <script src="js/door.js"></script>
     <script src="js/checkStatusServices.js"></script>
     <script src="js/raspberry.js"></script>
     <!-- <script src="js/sanitization.js"></script> -->
     <script src="js/webRadio.js"></script>
+    <script src="js/cameras.js"></script>
 
   </body>
 </html>

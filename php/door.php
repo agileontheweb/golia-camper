@@ -1,5 +1,4 @@
 <?php
-  echo "entro";
-  $command = escapeshellcmd('python ../py/reboot-raspberry.py');
-  $output = shell_exec($command);
+$status = $_POST['status_door'];
+exec("sudo python /var/www/html/golia-camper/py/door.py $status");
 ?>
