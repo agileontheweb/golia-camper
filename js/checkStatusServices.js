@@ -2,7 +2,7 @@ function checkStatusServices(){
   var listButtons = ["camera-front",
                     "camera-back",
                     "camera-water-discharge",
-                    "light-back",
+                    "back-window-hatchback",
                     "light-dinette",
                     "light-kitchen",
                     "light-left",
@@ -35,4 +35,3 @@ function checkStatusServices(){
   });
   $('#generic-notice').hide();
 }
-

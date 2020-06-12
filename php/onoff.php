@@ -9,8 +9,8 @@
 
   exec('sudo python /var/www/html/golia-camper/py/'.$id.'.py');
 
-  #$command = escapeshellcmd('python ../py/'.$id.'.py');
-  #$output = shell_exec($command);
+  //$command = escapeshellcmd('python ../py/'.$id.'.py');
+//$output = shell_exec($command);
 
 
 
