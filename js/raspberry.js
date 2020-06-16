@@ -3,8 +3,36 @@ $(document).ready(function() {
   // initAnalogicShutDownRaspberry();
 
   // setInterval(function() {
-  //     tempRaspberry();
+    //   tempRaspberry();
   // },1000);
+
+
+window.setInterval(function(){
+//  checkStatusBS();
+}, 2000);
+
+function checkStatusBS(){
+     console.log("checkStatusBS");
+    $.ajax({
+      type: "POST",
+      url: "./txt/statusBS.txt"
+    }).done(function( o ) {
+      console.log("STATUSTXT:" + o);
+      $('body').find('.status-bs').html(o);
+     });
+  }
+
+  statusBS();
+
+  function statusBS(){
+    console.log("STATUS SERVICES BATTERY: ");
+    $.ajax({
+      type: "POST",
+      url: "./py/statusBS.py"
+    }).done(function( o ) {
+      console.log("lunch python check status battery" + o);
+   });
+  }
 
   function tempRaspberry(){
      $.ajax({

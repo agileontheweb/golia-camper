@@ -3,7 +3,7 @@ function checkStatusServices(){
                     "camera-back",
                     "camera-water-discharge",
                     "back-window-hatchback",
-                    "light-dinette",
+                    "dinette-light-window",
                     "light-kitchen",
                     "light-left",
                     "perfume"]

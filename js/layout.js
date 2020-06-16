@@ -6,7 +6,7 @@ $(document).ready(function() {
   var timer = new Timer();
 
   statusNotice();
-  checkStatusServices();
+//  checkStatusServices();
   getAllButtonId();
   checkPhisicalButtons();
   door();

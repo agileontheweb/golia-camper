@@ -33,7 +33,7 @@
             <div class="rasp-temperature flex-1 p-2 text-center text-xs border-b-4 border-gray-600">
               5.1V Rasp
             </div>
-            <div class="flex-1 p-2 text-center text-xs border-b-4 border-orange-600">
+            <div class="status-bs flex-1 p-2 text-center text-xs border-b-4 border-orange-600">
               11.3V Servizi
             </div>
             <div class="flex-1 p-2 text-center text-xs border-b-4 border-green-600">

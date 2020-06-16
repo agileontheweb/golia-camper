@@ -14,7 +14,7 @@
             </a>
           </div>
           <div class="w-1/3 border-solid border-1 border-gray-200 border-solid border-1 border-gray-200">
-            <a href="#" id="light-window" data-pin="25" class="hover:no-underline">
+            <a href="#" id="dinette-light-window" data-pin="25" class="hover:no-underline">
               <div class="text-gray-200 text-center bg-gray-900 p-3">
                 Finestra
               </div>
